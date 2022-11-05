@@ -7,3 +7,10 @@
     }
 }
 
+
+namespace AqueaductoApp.CapaDatos.DataSet1TableAdapters {
+    
+    
+    public partial class BARRIOSTableAdapter {
+    }
+}

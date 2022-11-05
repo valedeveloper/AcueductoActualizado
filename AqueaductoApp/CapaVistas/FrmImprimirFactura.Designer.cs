@@ -388,7 +388,6 @@ namespace AqueaductoApp.CapaVistas
             this.Controls.Add(this.GridImprimir);
             this.Controls.Add(this.labelConsecutivo);
             this.Controls.Add(this.label);
-            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

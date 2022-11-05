@@ -224,6 +224,10 @@ namespace AqueaductoApp.CapaVistas
 
         private void FrmagregarPredio_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dataSet1.ESTRATOS' Puede moverla o quitarla según sea necesario.
+            this.eSTRATOSTableAdapter.Fill(this.dataSet1.ESTRATOS);
+            // TODO: esta línea de código carga datos en la tabla 'dataSet1.BARRIOS' Puede moverla o quitarla según sea necesario.
+            this.bARRIOSTableAdapter.Fill(this.dataSet1.BARRIOS);
             // TODO: esta línea de código carga datos en la tabla 'dataSet1.PROPIETARIOS' Puede moverla o quitarla según sea necesario.
             this.pROPIETARIOSTableAdapter.Fill(this.dataSet1.PROPIETARIOS);
 
@@ -235,6 +239,19 @@ namespace AqueaductoApp.CapaVistas
             string id = GridPropietario.CurrentRow.Cells[0].Value.ToString();
             string cedula = GridPropietario.CurrentRow.Cells[1].Value.ToString();
             this.txtCedula.Text = cedula;
+
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.bARRIOSTableAdapter.FillBy(this.dataSet1.BARRIOS);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
 
         }
     }

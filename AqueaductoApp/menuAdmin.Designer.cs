@@ -30,7 +30,6 @@ namespace AqueaductoApp
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menuAdmin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel = new System.Windows.Forms.Panel();
             this.panelsubMenuReportes = new System.Windows.Forms.Panel();
@@ -68,12 +67,11 @@ namespace AqueaductoApp
             this.pROPIETARIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pROPIETARIOSTableAdapter = new AqueaductoApp.CapaDatos.DataSet1TableAdapters.PROPIETARIOSTableAdapter();
             this.tableAdapterManager1 = new AqueaductoApp.CapaDatos.DataSet1TableAdapters.TableAdapterManager();
-            this.pREDIOSTableAdapter = new AqueaductoApp.CapaDatos.DataSet1TableAdapters.PREDIOSTableAdapter();
-            this.pREDIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pREDIOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pREDIOSTableAdapter1 = new AqueaductoApp.AcueductoDataSetTableAdapters.PREDIOSTableAdapter();
             this.pROPIETARIOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pROPIETARIOSTableAdapter1 = new AqueaductoApp.AcueductoDataSetTableAdapters.PROPIETARIOSTableAdapter();
+            this.pREDIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pREDIOSTableAdapter = new AqueaductoApp.CapaDatos.DataSet1TableAdapters.PREDIOSTableAdapter();
             this.panel1.SuspendLayout();
             this.panel.SuspendLayout();
             this.panelsubMenuReportes.SuspendLayout();
@@ -90,9 +88,8 @@ namespace AqueaductoApp
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROPIETARIOSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pREDIOSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pREDIOSBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROPIETARIOSBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pREDIOSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -107,7 +104,7 @@ namespace AqueaductoApp
             this.panel1.ForeColor = System.Drawing.Color.LightGray;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(215, 690);
+            this.panel1.Size = new System.Drawing.Size(215, 788);
             this.panel1.TabIndex = 0;
             // 
             // panel
@@ -123,7 +120,7 @@ namespace AqueaductoApp
             this.panel.ForeColor = System.Drawing.Color.LightGray;
             this.panel.Location = new System.Drawing.Point(0, 321);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(215, 369);
+            this.panel.Size = new System.Drawing.Size(215, 467);
             this.panel.TabIndex = 3;
             // 
             // panelsubMenuReportes
@@ -556,14 +553,13 @@ namespace AqueaductoApp
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(215, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(560, 43);
+            this.panelTop.Size = new System.Drawing.Size(629, 43);
             this.panelTop.TabIndex = 2;
             // 
             // pictureMinimize
             // 
             this.pictureMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureMinimize.Image = ((System.Drawing.Image)(resources.GetObject("pictureMinimize.Image")));
-            this.pictureMinimize.Location = new System.Drawing.Point(478, 8);
+            this.pictureMinimize.Location = new System.Drawing.Point(547, 8);
             this.pictureMinimize.Name = "pictureMinimize";
             this.pictureMinimize.Size = new System.Drawing.Size(30, 28);
             this.pictureMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -574,8 +570,7 @@ namespace AqueaductoApp
             // pictureClose
             // 
             this.pictureClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureClose.Image = ((System.Drawing.Image)(resources.GetObject("pictureClose.Image")));
-            this.pictureClose.Location = new System.Drawing.Point(518, 7);
+            this.pictureClose.Location = new System.Drawing.Point(587, 7);
             this.pictureClose.Name = "pictureClose";
             this.pictureClose.Size = new System.Drawing.Size(30, 30);
             this.pictureClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -589,7 +584,7 @@ namespace AqueaductoApp
             this.panelDerecho.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.panelDerecho.Location = new System.Drawing.Point(215, 43);
             this.panelDerecho.Name = "panelDerecho";
-            this.panelDerecho.Size = new System.Drawing.Size(560, 647);
+            this.panelDerecho.Size = new System.Drawing.Size(629, 745);
             this.panelDerecho.TabIndex = 3;
             // 
             // acueductoDataSet
@@ -609,7 +604,9 @@ namespace AqueaductoApp
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BARRIOSTableAdapter = null;
             this.tableAdapterManager.CONSUMOSTableAdapter = null;
+            this.tableAdapterManager.ESTRATOSTableAdapter = null;
             this.tableAdapterManager.FACTURASTableAdapter = null;
             this.tableAdapterManager.PREDIOSTableAdapter = null;
             this.tableAdapterManager.PROPIETARIOSTableAdapter = null;
@@ -633,26 +630,14 @@ namespace AqueaductoApp
             // tableAdapterManager1
             // 
             this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.BARRIOSTableAdapter = null;
             this.tableAdapterManager1.CONSUMOSTableAdapter = null;
+            this.tableAdapterManager1.ESTRATOSTableAdapter = null;
             this.tableAdapterManager1.FACTURASTableAdapter = null;
-            this.tableAdapterManager1.PREDIOSTableAdapter = this.pREDIOSTableAdapter;
+            this.tableAdapterManager1.PREDIOSTableAdapter = null;
             this.tableAdapterManager1.PROPIETARIOSTableAdapter = this.pROPIETARIOSTableAdapter;
             this.tableAdapterManager1.UpdateOrder = AqueaductoApp.CapaDatos.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager1.USUARIOSTableAdapter = null;
-            // 
-            // pREDIOSTableAdapter
-            // 
-            this.pREDIOSTableAdapter.ClearBeforeFill = true;
-            // 
-            // pREDIOSBindingSource
-            // 
-            this.pREDIOSBindingSource.DataMember = "PREDIOS";
-            this.pREDIOSBindingSource.DataSource = this.dataSet1;
-            // 
-            // pREDIOSBindingSource1
-            // 
-            this.pREDIOSBindingSource1.DataMember = "PREDIOS";
-            this.pREDIOSBindingSource1.DataSource = this.acueductoDataSet;
             // 
             // pREDIOSTableAdapter1
             // 
@@ -667,11 +652,21 @@ namespace AqueaductoApp
             // 
             this.pROPIETARIOSTableAdapter1.ClearBeforeFill = true;
             // 
+            // pREDIOSBindingSource
+            // 
+            this.pREDIOSBindingSource.DataMember = "PREDIOS";
+            this.pREDIOSBindingSource.DataSource = this.dataSet1;
+            // 
+            // pREDIOSTableAdapter
+            // 
+            this.pREDIOSTableAdapter.ClearBeforeFill = true;
+            // 
             // menuAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 690);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(844, 788);
             this.Controls.Add(this.panelDerecho);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panel1);
@@ -700,9 +695,8 @@ namespace AqueaductoApp
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROPIETARIOSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pREDIOSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pREDIOSBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROPIETARIOSBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pREDIOSBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -744,14 +738,13 @@ namespace AqueaductoApp
         private System.Windows.Forms.BindingSource pROPIETARIOSBindingSource;
         private CapaDatos.DataSet1TableAdapters.PROPIETARIOSTableAdapter pROPIETARIOSTableAdapter;
         private CapaDatos.DataSet1TableAdapters.TableAdapterManager tableAdapterManager1;
-        private CapaDatos.DataSet1TableAdapters.PREDIOSTableAdapter pREDIOSTableAdapter;
-        private System.Windows.Forms.BindingSource pREDIOSBindingSource;
-        private System.Windows.Forms.BindingSource pREDIOSBindingSource1;
         private AcueductoDataSetTableAdapters.PREDIOSTableAdapter pREDIOSTableAdapter1;
         private System.Windows.Forms.BindingSource pROPIETARIOSBindingSource1;
         private AcueductoDataSetTableAdapters.PROPIETARIOSTableAdapter pROPIETARIOSTableAdapter1;
         private System.Windows.Forms.Label labelRol;
         private System.Windows.Forms.PictureBox pictureMinimize;
+        private System.Windows.Forms.BindingSource pREDIOSBindingSource;
+        private CapaDatos.DataSet1TableAdapters.PREDIOSTableAdapter pREDIOSTableAdapter;
     }
-}
 
+}

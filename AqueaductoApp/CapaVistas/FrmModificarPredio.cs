@@ -197,10 +197,16 @@ namespace AqueaductoApp.CapaVistas
 
         private void FrmModificarPredio_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dataSet1.BARRIOS' Puede moverla o quitarla según sea necesario.
+            this.bARRIOSTableAdapter1.Fill(this.dataSet1.BARRIOS);
+            // TODO: esta línea de código carga datos en la tabla 'dataSet1.ESTRATOS' Puede moverla o quitarla según sea necesario.
+            this.eSTRATOSTableAdapter.Fill(this.dataSet1.ESTRATOS);
+            // TODO: esta línea de código carga datos en la tabla 'acueductoDataSet.BARRIOS' Puede moverla o quitarla según sea necesario.
+            this.bARRIOSTableAdapter.Fill(this.acueductoDataSet.BARRIOS);
             // TODO: esta línea de código carga datos en la tabla 'dataSet1.PREDIOS' Puede moverla o quitarla según sea necesario.
             this.pREDIOSTableAdapter1.Fill(this.dataSet1.PREDIOS);
             // TODO: esta línea de código carga datos en la tabla 'acueductoDataSet.PREDIOS' Puede moverla o quitarla según sea necesario.
-            this.pREDIOSTableAdapter.Fill(this.acueductoDataSet.PREDIOS);
+            //this.pREDIOSTableAdapter.Fill(this.acueductoDataSet.PREDIOS);
 
         }
 
@@ -234,6 +240,12 @@ namespace AqueaductoApp.CapaVistas
                 int index = comboEstado.FindString(estadoStri);
                 comboEstado.SelectedIndex = index;
             }
+
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+           
 
         }
     }

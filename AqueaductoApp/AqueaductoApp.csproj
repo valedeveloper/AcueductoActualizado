@@ -127,6 +127,18 @@
     <Compile Include="CapaVistas\FrmAgregarUsuario.Designer.cs">
       <DependentUpon>FrmAgregarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="CapaVistas\FrmCrudBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaVistas\FrmCrudBarrio.Designer.cs">
+      <DependentUpon>FrmCrudBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaVistas\FrmCrudEstrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaVistas\FrmCrudEstrato.Designer.cs">
+      <DependentUpon>FrmCrudEstrato.cs</DependentUpon>
+    </Compile>
     <Compile Include="CapaVistas\FrmModificarConsumo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +175,12 @@
     <Compile Include="CapaVistas\FrmAgregarPropietario.Designer.cs">
       <DependentUpon>FrmAgregarPropietario.cs</DependentUpon>
     </Compile>
+    <Compile Include="menuAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuAdmin.Designer.cs">
+      <DependentUpon>menuAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\CrystalReportConsumos.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -185,6 +203,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReportFactura.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reportes\CrystalReportPredios.cs">
       <AutoGen>True</AutoGen>
@@ -203,12 +222,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReportUser.rpt</DependentUpon>
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="menuAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="menuAdmin.Designer.cs">
-      <DependentUpon>menuAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -290,6 +303,12 @@
     <EmbeddedResource Include="CapaVistas\FrmAgregarUsuario.resx">
       <DependentUpon>FrmAgregarUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CapaVistas\FrmCrudBarrio.resx">
+      <DependentUpon>FrmCrudBarrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaVistas\FrmCrudEstrato.resx">
+      <DependentUpon>FrmCrudEstrato.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CapaVistas\FrmImprimirFactura.resx">
       <DependentUpon>FrmImprimirFactura.cs</DependentUpon>
     </EmbeddedResource>
@@ -307,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapaVistas\FrmAgregarPropietario.resx">
       <DependentUpon>FrmAgregarPropietario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuAdmin.resx">
+      <DependentUpon>menuAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\CrystalReportConsumos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -338,9 +360,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="menuAdmin.resx">
-      <DependentUpon>menuAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menuDigitador.resx">
       <DependentUpon>menuDigitador.cs</DependentUpon>

@@ -286,7 +286,6 @@ C:\Users\PC01AQ\Desktop\AqueaductoApp\AqueaductoApp\obj\Debug\AqueaductoApp.Capa
 C:\Users\PC01AQ\Desktop\AqueaductoApp\AqueaductoApp\obj\Debug\AqueaductoApp.CapaVistas.FrmModificarUsuario.resources
 C:\Users\PC01AQ\Desktop\AqueaductoApp\AqueaductoApp\obj\Debug\AqueaductoApp.CapaVistas.FrmAgregarPropietario.resources
 C:\Users\PC01AQ\Desktop\AqueaductoApp\AqueaductoApp\obj\Debug\AqueaductoApp.Login.resources
-C:\Users\PC01AQ\Desktop\AqueaductoApp\AqueaductoApp\obj\Debug\AqueaductoApp.menuAdmin.resources
 C:\Users\PC01AQ\Desktop\AqueaductoApp\AqueaductoApp\obj\Debug\AqueaductoApp.menuDigitador.resources
 C:\Users\PC01AQ\Desktop\AqueaductoApp\AqueaductoApp\obj\Debug\AqueaductoApp.menuFacturador.resources
 C:\Users\PC01AQ\Desktop\AqueaductoApp\AqueaductoApp\obj\Debug\AqueaductoApp.Properties.Resources.resources
@@ -302,3 +301,6 @@ C:\Users\PC01AQ\Desktop\AqueaductoApp\AqueaductoApp\obj\Debug\AqueaductoApp.cspr
 C:\Users\PC01AQ\Desktop\AqueaductoApp\AqueaductoApp\obj\Debug\AqueaductoApp.csproj.CopyComplete
 C:\Users\PC01AQ\Desktop\AqueaductoApp\AqueaductoApp\obj\Debug\AqueaductoApp.exe
 C:\Users\PC01AQ\Desktop\AqueaductoApp\AqueaductoApp\obj\Debug\AqueaductoApp.pdb
+C:\Users\PC01AQ\Desktop\AqueaductoApp\AqueaductoApp\obj\Debug\AqueaductoApp.menuAdmin.resources
+C:\Users\PC01AQ\Desktop\AqueaductoApp\AqueaductoApp\obj\Debug\AqueaductoApp.CapaVistas.FrmCrudEstrato.resources
+C:\Users\PC01AQ\Desktop\AqueaductoApp\AqueaductoApp\obj\Debug\AqueaductoApp.CapaVistas.FrmCrudBarrio.resources

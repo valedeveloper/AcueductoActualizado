@@ -121,41 +121,11 @@
     <value>17, 17</value>
   </metadata>
   <metadata name="fileSystemWatcher1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>177, 16</value>
+    <value>181, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>64</value>
+    <value>50</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureMinimize.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAIAAAD/gAIDAAAABGdBTUEAALGPC/xhBQAAAPNJREFUeF7t
-        1LENgEAMBEFKoKiv7puGnMj7GdJY04A3uOtemyGxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKx
-        ArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKx
-        ArGCw1jPz+/zzpBYgViBWIGBD8QKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArE
-        CsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxBpb+wUzJAD9
-        ZsmAVwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="pictureClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAIAAAD/gAIDAAAABGdBTUEAALGPC/xhBQAAAxJJREFUeF7t
-        3E1qFFEUhmGX4Bp0Iw6yAl2FYHDgLoI6MCsQ3IOCe1JJkMSBKT/5Qg+K7q57Tp2/C+fwjuonqX5yaTo0
-        3CdPL666wRpLUGMJaixBjSWosQQ1lqDGEtRYghpLUGMJaixBjSVIj/Xs5fXqyBTteWwl1ovXn3/c3L37
-        9H11vHiXH77+ur2/uPyyOj6YBgtSP2/vlmV5eFgm8oLUXzzxstz8/qPzEmMdpDizeB2kODovGdZKilPf
-        ayXFUXgJsI5KcSp7HZXiSL1GsZ6/usZb4+MvOTZ4nrcfv63uSg+PdALqcfCi8NJWd51KsLLevD/5J+Lg
-        ZKn1dWZNcaQPLHvPmsjLXArJsNAUXh5SSIyFins5SSENFirr5SeFlFiooJerFNJjoVJe3lJoFxYq4hUg
-        hfZioXSvGClkgIUSvcKkkA0WSvGKlEJmWCjYK1gKWWKhMK94KWSMhQK8UqSQPRZy9cqSQi5YyMkrUQp5
-        YSFzr1wp5IiFDL3SpZAvFjLxqiCF3LHQTq8iUigCC6m96kihICyk8ColheKwkMirmhQKxUKDXgWlUDQW
-        2vziE2c3L0j5QjcBC22urzOD++LXFMvBQjqvRCmUhoWkXrlSKBMLjXulS6FkLDTiVUEK5WNtfkrANNb/
-        RqQ4FbwyscalOOleaVhSKU6uVw6WToqT6JWA1f/ujLa5pnASC2fz8wQvW/1w70KxBqV4cUGvOCyRFKvm
-        FYSlkGKlvCKw1FKsjpc71k4pVsTLF8tEilXwcsQylGLpXl5Y5lIs18sFy0mKJXrZY7lKsSwvY6wAKZbi
-        ZYkVJsXivcywgqVYsJcNVooUi/QywEqUYmFee7HSpViM1y6sIlIswEuPVUqKeXspsQpKMVcvDVZZKebn
-        JcYqLsWcvGRYU0gxDy8B1kRSzNxrFKs37kGClTXpllBn1pfXllBs0s3Gjnr5bjbGJt3GbuUVsY0dO3jN
-        IsUOXjoppMFC8Jpx6014RW+9yXpT1+5cjSWosQQ1lqDGEtRYghpLUGMJaixBjSWosQQ1lqDGGu7i6h/i
-        G1UpL1r+UgAAAABJRU5ErkJggg==
-</value>
-  </data>
   <metadata name="acueductoDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>340, 17</value>
   </metadata>
@@ -163,39 +133,36 @@
     <value>491, 17</value>
   </metadata>
   <metadata name="uSUARIOSTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
+    <value>678, 17</value>
   </metadata>
   <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>198, 56</value>
+    <value>17, 56</value>
   </metadata>
   <metadata name="dataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>369, 56</value>
+    <value>188, 56</value>
   </metadata>
   <metadata name="pROPIETARIOSBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>468, 56</value>
+    <value>287, 56</value>
   </metadata>
   <metadata name="pROPIETARIOSTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
+    <value>499, 56</value>
   </metadata>
   <metadata name="tableAdapterManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>223, 95</value>
+    <value>705, 56</value>
+  </metadata>
+  <metadata name="pREDIOSTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 95</value>
+  </metadata>
+  <metadata name="pROPIETARIOSBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>197, 95</value>
+  </metadata>
+  <metadata name="pROPIETARIOSTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>416, 95</value>
+  </metadata>
+  <metadata name="pREDIOSBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>629, 95</value>
   </metadata>
   <metadata name="pREDIOSTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 134</value>
-  </metadata>
-  <metadata name="pREDIOSBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>401, 95</value>
-  </metadata>
-  <metadata name="pREDIOSBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>190, 134</value>
-  </metadata>
-  <metadata name="pREDIOSTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>376, 134</value>
-  </metadata>
-  <metadata name="pROPIETARIOSBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 173</value>
-  </metadata>
-  <metadata name="pROPIETARIOSTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>236, 173</value>
   </metadata>
 </root>
