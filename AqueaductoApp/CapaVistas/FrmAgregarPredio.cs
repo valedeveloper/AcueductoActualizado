@@ -25,7 +25,7 @@ namespace AqueaductoApp.CapaVistas
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             CapaDatos.DataSet1TableAdapters.PREDIOSTableAdapter prediosExist = new CapaDatos.DataSet1TableAdapters.PREDIOSTableAdapter();
-            int predioExistencia = (int)prediosExist.validarExistenciaCatastro(this.txtCatastro.Text);
+            int predioExistencia = (int)prediosExist.validarPredio(this.txtCatastro.Text);
 
             if(predioExistencia==0)
             {
@@ -67,7 +67,7 @@ namespace AqueaductoApp.CapaVistas
 
                                     //Casa
                                     CapaDatos.DataSet1TableAdapters.PREDIOSTableAdapter TPR = new CapaDatos.DataSet1TableAdapters.PREDIOSTableAdapter();
-                                    TPR.InsertarPredio(this.txtCatastro.Text, this.txtCedula.Text, this.comboEstrato.Text, this.comboBarrio.Text, estado);
+                                    TPR.InsertarPredio(this.txtCatastro.Text, this.txtCedula.Text,int.Parse( this.comboEstrato.Text),int.Parse( this.comboBarrio.Text), estado);
 
 
 
@@ -163,7 +163,7 @@ namespace AqueaductoApp.CapaVistas
             if (MessageBox.Show("¿Desea cancelar el proceso?", "Notificación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 CapaDatos.DataSet1TableAdapters.PREDIOSTableAdapter prediosExist = new CapaDatos.DataSet1TableAdapters.PREDIOSTableAdapter();
-                int predioExistencia = (int)prediosExist.validarExistenciaCatastro(this.txtCatastro.Text);
+                int predioExistencia = (int)prediosExist.validarPredio(this.txtCatastro.Text);
 
                 this.txtCedula.Text = "";
                 this.txtCatastro.Text = "";

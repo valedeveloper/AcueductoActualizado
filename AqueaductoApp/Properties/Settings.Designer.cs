@@ -27,19 +27,20 @@ namespace AqueaductoApp.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=Acueducto;Integrated Security=True")]
-        public string AcueductoConnectionString1 {
+        public string AcueductoConnectionString {
             get {
-                return ((string)(this["AcueductoConnectionString1"]));
+                return ((string)(this["AcueductoConnectionString"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=Acueducto;Integrated Security=True")]
-        public string AcueductoConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(Local)\\SQLEXPRESS;Initial Catalog=Acueducto;Integrated Security=True" +
+            "")]
+        public string AcueductoConnectionString1 {
             get {
-                return ((string)(this["AcueductoConnectionString"]));
+                return ((string)(this["AcueductoConnectionString1"]));
             }
         }
     }

@@ -82,7 +82,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AcueductoDataSet.Designer.cs">
+    <Compile Include="CapaDatos\AcueductoDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AcueductoDataSet.xsd</DependentUpon>
@@ -102,6 +102,12 @@
     <Compile Include="CapaModelos\Encript.cs" />
     <Compile Include="CapaModelos\PictureRound.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CapaVistas\FrmAgregarEstrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaVistas\FrmAgregarEstrato.Designer.cs">
+      <DependentUpon>FrmAgregarEstrato.cs</DependentUpon>
     </Compile>
     <Compile Include="CapaVistas\FrmAgregarFactura.cs">
       <SubType>Form</SubType>
@@ -401,15 +407,15 @@
     <EmbeddedResource Include="Reportes\FrmReportPredio.resx">
       <DependentUpon>FrmReportPredio.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="AcueductoDataSet.xsc">
+    <None Include="CapaDatos\AcueductoDataSet.xsc">
       <DependentUpon>AcueductoDataSet.xsd</DependentUpon>
     </None>
-    <None Include="AcueductoDataSet.xsd">
+    <None Include="CapaDatos\AcueductoDataSet.xsd">
+      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>AcueductoDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </None>
-    <None Include="AcueductoDataSet.xss">
+    <None Include="CapaDatos\AcueductoDataSet.xss">
       <DependentUpon>AcueductoDataSet.xsd</DependentUpon>
     </None>
     <None Include="CapaDatos\DataAcueducto.xsc">

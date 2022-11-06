@@ -43,7 +43,6 @@ namespace AqueaductoApp.CapaVistas
             this.txtConsumo = new System.Windows.Forms.TextBox();
             this.labelFechaConsumo = new System.Windows.Forms.Label();
             this.labelIdCatratral = new System.Windows.Forms.Label();
-            this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.labelFecha = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -95,7 +94,7 @@ namespace AqueaductoApp.CapaVistas
             // 
             this.labelConsumo.AutoSize = true;
             this.labelConsumo.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold);
-            this.labelConsumo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.labelConsumo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
             this.labelConsumo.Location = new System.Drawing.Point(84, 105);
             this.labelConsumo.Name = "labelConsumo";
             this.labelConsumo.Size = new System.Drawing.Size(267, 29);
@@ -104,7 +103,7 @@ namespace AqueaductoApp.CapaVistas
             // 
             // txtCatastro
             // 
-            this.txtCatastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.txtCatastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(191)))), ((int)(((byte)(227)))));
             this.txtCatastro.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtCatastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
             this.txtCatastro.Location = new System.Drawing.Point(266, 199);
@@ -116,7 +115,7 @@ namespace AqueaductoApp.CapaVistas
             // 
             // txtConsumo
             // 
-            this.txtConsumo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.txtConsumo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(191)))), ((int)(((byte)(227)))));
             this.txtConsumo.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtConsumo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
             this.txtConsumo.Location = new System.Drawing.Point(277, 400);
@@ -136,35 +135,18 @@ namespace AqueaductoApp.CapaVistas
             // 
             this.labelIdCatratral.AutoSize = true;
             this.labelIdCatratral.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
-            this.labelIdCatratral.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.labelIdCatratral.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
             this.labelIdCatratral.Location = new System.Drawing.Point(90, 204);
             this.labelIdCatratral.Name = "labelIdCatratral";
             this.labelIdCatratral.Size = new System.Drawing.Size(159, 16);
             this.labelIdCatratral.TabIndex = 36;
             this.labelIdCatratral.Text = "Número de Catastro:";
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnBuscar.IconColor = System.Drawing.Color.Black;
-            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscar.Location = new System.Drawing.Point(393, 199);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(72, 23);
-            this.btnBuscar.TabIndex = 62;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
             this.label1.Location = new System.Drawing.Point(97, 454);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(155, 16);
@@ -175,7 +157,7 @@ namespace AqueaductoApp.CapaVistas
             // 
             this.labelFecha.AutoSize = true;
             this.labelFecha.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.labelFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
             this.labelFecha.Location = new System.Drawing.Point(272, 454);
             this.labelFecha.Name = "labelFecha";
             this.labelFecha.Size = new System.Drawing.Size(0, 16);
@@ -186,7 +168,7 @@ namespace AqueaductoApp.CapaVistas
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
             this.label2.Location = new System.Drawing.Point(97, 407);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 16);
@@ -199,7 +181,7 @@ namespace AqueaductoApp.CapaVistas
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GridConsumo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.GridConsumo.AutoGenerateColumns = false;
-            this.GridConsumo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
+            this.GridConsumo.BackgroundColor = System.Drawing.Color.White;
             this.GridConsumo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GridConsumo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.GridConsumo.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
@@ -314,13 +296,12 @@ namespace AqueaductoApp.CapaVistas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(560, 647);
             this.Controls.Add(this.GridConsumo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelFecha);
-            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtCatastro);
             this.Controls.Add(this.txtConsumo);
             this.Controls.Add(this.labelFechaConsumo);
@@ -351,7 +332,6 @@ namespace AqueaductoApp.CapaVistas
         private System.Windows.Forms.TextBox txtConsumo;
         private System.Windows.Forms.Label labelFechaConsumo;
         private System.Windows.Forms.Label labelIdCatratral;
-        private FontAwesome.Sharp.IconButton btnBuscar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelFecha;
         private System.Windows.Forms.Label label2;

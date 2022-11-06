@@ -353,7 +353,9 @@ namespace AqueaductoApp
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BARRIOSTableAdapter = null;
             this.tableAdapterManager.CONSUMOSTableAdapter = null;
+            this.tableAdapterManager.ESTRATOSTableAdapter = null;
             this.tableAdapterManager.FACTURASTableAdapter = this.fACTURASTableAdapter;
             this.tableAdapterManager.PREDIOSTableAdapter = null;
             this.tableAdapterManager.PROPIETARIOSTableAdapter = null;
@@ -372,6 +374,7 @@ namespace AqueaductoApp
             this.Name = "menuFacturador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Facturador";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelItem.ResumeLayout(false);
             this.panelSubmenuReportes.ResumeLayout(false);
             this.panelSubmenuFactura.ResumeLayout(false);

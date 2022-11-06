@@ -54,8 +54,6 @@ namespace AqueaductoApp.CapaVistas
             this.nombrePropietarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.celularPropietarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.correoPropietarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estratoPredioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.barrioPredioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idConsumoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valorFacturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoFacturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,7 +72,7 @@ namespace AqueaductoApp.CapaVistas
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
             this.label2.Location = new System.Drawing.Point(68, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(257, 29);
@@ -125,7 +123,7 @@ namespace AqueaductoApp.CapaVistas
             // 
             this.labelConsecutivo.AutoSize = true;
             this.labelConsecutivo.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelConsecutivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.labelConsecutivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
             this.labelConsecutivo.Location = new System.Drawing.Point(193, 217);
             this.labelConsecutivo.Name = "labelConsecutivo";
             this.labelConsecutivo.Size = new System.Drawing.Size(0, 16);
@@ -137,7 +135,7 @@ namespace AqueaductoApp.CapaVistas
             // 
             this.label.AutoSize = true;
             this.label.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
             this.label.Location = new System.Drawing.Point(70, 217);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(103, 16);
@@ -161,7 +159,9 @@ namespace AqueaductoApp.CapaVistas
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BARRIOSTableAdapter = null;
             this.tableAdapterManager.CONSUMOSTableAdapter = null;
+            this.tableAdapterManager.ESTRATOSTableAdapter = null;
             this.tableAdapterManager.FACTURASTableAdapter = this.fACTURASTableAdapter;
             this.tableAdapterManager.PREDIOSTableAdapter = null;
             this.tableAdapterManager.PROPIETARIOSTableAdapter = null;
@@ -174,7 +174,7 @@ namespace AqueaductoApp.CapaVistas
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GridImprimir.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.GridImprimir.AutoGenerateColumns = false;
-            this.GridImprimir.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
+            this.GridImprimir.BackgroundColor = System.Drawing.Color.White;
             this.GridImprimir.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.GridImprimir.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.GridImprimir.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
@@ -197,8 +197,6 @@ namespace AqueaductoApp.CapaVistas
             this.nombrePropietarioDataGridViewTextBoxColumn,
             this.celularPropietarioDataGridViewTextBoxColumn,
             this.correoPropietarioDataGridViewTextBoxColumn,
-            this.estratoPredioDataGridViewTextBoxColumn,
-            this.barrioPredioDataGridViewTextBoxColumn,
             this.idConsumoDataGridViewTextBoxColumn,
             this.valorFacturaDataGridViewTextBoxColumn,
             this.estadoFacturaDataGridViewTextBoxColumn,
@@ -298,22 +296,6 @@ namespace AqueaductoApp.CapaVistas
             this.correoPropietarioDataGridViewTextBoxColumn.ReadOnly = true;
             this.correoPropietarioDataGridViewTextBoxColumn.Visible = false;
             // 
-            // estratoPredioDataGridViewTextBoxColumn
-            // 
-            this.estratoPredioDataGridViewTextBoxColumn.DataPropertyName = "Estrato_Predio";
-            this.estratoPredioDataGridViewTextBoxColumn.HeaderText = "Estrato_Predio";
-            this.estratoPredioDataGridViewTextBoxColumn.Name = "estratoPredioDataGridViewTextBoxColumn";
-            this.estratoPredioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.estratoPredioDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // barrioPredioDataGridViewTextBoxColumn
-            // 
-            this.barrioPredioDataGridViewTextBoxColumn.DataPropertyName = "Barrio_Predio";
-            this.barrioPredioDataGridViewTextBoxColumn.HeaderText = "Barrio_Predio";
-            this.barrioPredioDataGridViewTextBoxColumn.Name = "barrioPredioDataGridViewTextBoxColumn";
-            this.barrioPredioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.barrioPredioDataGridViewTextBoxColumn.Visible = false;
-            // 
             // idConsumoDataGridViewTextBoxColumn
             // 
             this.idConsumoDataGridViewTextBoxColumn.DataPropertyName = "Id_Consumo";
@@ -383,7 +365,7 @@ namespace AqueaductoApp.CapaVistas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(560, 647);
             this.Controls.Add(this.GridImprimir);
             this.Controls.Add(this.labelConsecutivo);

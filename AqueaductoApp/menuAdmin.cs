@@ -208,6 +208,110 @@ namespace AqueaductoApp
             showSubMenu(panelsubMenuReportes);
         }
 
+       
+
+      
+
+        //private void btnReportePredio_Click(object sender, EventArgs e)
+        //{
+        // 
+
+        //}
+
+        private void uSUARIOSBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.uSUARIOSBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dataSet1);
+
+        }
+
+        private void menuAdmin_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'dataSet1.USUARIOS' Puede moverla o quitarla según sea necesario.
+            this.uSUARIOSTableAdapter.Fill(this.dataSet1.USUARIOS);
+            // TODO: esta línea de código carga datos en la tabla 'dataSet1.CONSUMOS' Puede moverla o quitarla según sea necesario.
+            //this.cONSUMOSTableAdapter.Fill(this.dataSet1.CONSUMOS);
+            // TODO: esta línea de código carga datos en la tabla 'dataSet1.PREDIOS' Puede moverla o quitarla según sea necesario.
+            this.pREDIOSTableAdapter.Fill(this.dataSet1.PREDIOS);
+            // TODO: esta línea de código carga datos en la tabla 'dataSet1.PROPIETARIOS' Puede moverla o quitarla según sea necesario.
+            this.pROPIETARIOSTableAdapter.Fill(this.dataSet1.PROPIETARIOS);
+            // TODO: esta línea de código carga datos en la tabla 'dataSet1.PREDIOS' Puede moverla o quitarla según sea necesario.
+            this.pREDIOSTableAdapter.Fill(this.dataSet1.PREDIOS);
+
+
+
+            // TODO: esta línea de código carga datos en la tabla 'acueductoDataSet.PROPIETARIOS' Puede moverla o quitarla según sea necesario.
+            
+            //this.pROPIETARIOSTableAdapter1.Fill(this.acueductoDataSet.PROPIETARIOS);
+            // TODO: esta línea de código carga datos en la tabla 'acueductoDataSet.PREDIOS' Puede moverla o quitarla según sea necesario.
+            //this.pREDIOSTableAdapter1.Fill(this.acueductoDataSet.PREDIOS);
+            // TODO: esta línea de código carga datos en la tabla 'dataSet1.FACTURAS' Puede moverla o quitarla según sea necesario.
+
+            //this.pREDIOSTableAdapter.Fill(this.dataSet1.PREDIOS);
+            // TODO: esta línea de código carga datos en la tabla 'dataSet1.PROPIETARIOS' Puede moverla o quitarla según sea necesario.
+            this.pROPIETARIOSTableAdapter.Fill(this.dataSet1.PROPIETARIOS);
+            // TODO: esta línea de código carga datos en la tabla 'acueductoDataSet.USUARIOS' Puede moverla o quitarla según sea necesario.
+            this.uSUARIOSTableAdapter.Fill(this.dataSet1.USUARIOS);
+
+        }
+
+        private void panelUsuario_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureNormal_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Normal;
+        }
+
+        
+
+
+        private void btnReportes_Click_1(object sender, EventArgs e)
+        {
+            showSubMenu(panelsubMenuReportes);
+        }
+
+        private void btnBarrio_Click(object sender, EventArgs e)
+        {
+
+            mostrarPanel(new FrmCrudBarrio());
+
+           
+        }
+
+
+
+
+        private void btnReportePredio_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+
+            //Traigo el reportePredio
+            Reportes.CrystalReportPredios reportDatos = new Reportes.CrystalReportPredios();
+
+            //Traer los datos y arreglar Datos
+
+            this.pREDIOSTableAdapter.Fill(this.dataSet1.PREDIOS);
+            reportDatos.SetDataSource(this.dataSet1);
+
+            //Traer Form
+
+            Reportes.FrmReportPredio reportePredio = new Reportes.FrmReportPredio();
+            reportePredio.crystalReportViewer1.ReportSource = reportDatos;
+            reportePredio.ShowDialog();
+            reportePredio.Close();
+            hideSubmenu();
+
+        }
+
         private void btnReportUser_Click(object sender, EventArgs e)
         {
 
@@ -215,8 +319,8 @@ namespace AqueaductoApp
             Reportes.CrystalReportUser reportDatos = new Reportes.CrystalReportUser();
 
             //Traer los datos
-            this.uSUARIOSTableAdapter.Fill(this.acueductoDataSet.USUARIOS);
-            reportDatos.SetDataSource(this.acueductoDataSet);
+            this.uSUARIOSTableAdapter.Fill(this.dataSet1.USUARIOS);
+            reportDatos.SetDataSource(this.dataSet1);
 
             Cursor.Current = Cursors.Default;
 
@@ -236,8 +340,8 @@ namespace AqueaductoApp
             //Traer los datos
 
             //Acomodar error
-            this.pROPIETARIOSTableAdapter1.Fill(this.acueductoDataSet.PROPIETARIOS);
-            reportDatos.SetDataSource(this.acueductoDataSet);
+            this.pROPIETARIOSTableAdapter.Fill(this.dataSet1.PROPIETARIOS);
+            reportDatos.SetDataSource(this.dataSet1);
 
             Cursor.Current = Cursors.Default;
 
@@ -249,76 +353,38 @@ namespace AqueaductoApp
             hideSubmenu();
         }
 
-        //private void btnReportePredio_Click(object sender, EventArgs e)
-        //{
-        // 
+        private void btnEstrato_Click(object sender, EventArgs e)
+        {
 
-        //}
+            mostrarPanel(new FrmCrudEstrato());
+        }
 
-        private void uSUARIOSBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void panelDerecho_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pROPIETARIOSBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.uSUARIOSBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.acueductoDataSet);
+            this.pROPIETARIOSBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dataSet1);
 
         }
 
-        private void menuAdmin_Load(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'dataSet1.PREDIOS' Puede moverla o quitarla según sea necesario.
-            this.pREDIOSTableAdapter.Fill(this.dataSet1.PREDIOS);
-
-
-
-            // TODO: esta línea de código carga datos en la tabla 'acueductoDataSet.PROPIETARIOS' Puede moverla o quitarla según sea necesario.
-            this.pROPIETARIOSTableAdapter1.Fill(this.acueductoDataSet.PROPIETARIOS);
-            // TODO: esta línea de código carga datos en la tabla 'acueductoDataSet.PREDIOS' Puede moverla o quitarla según sea necesario.
-            //this.pREDIOSTableAdapter1.Fill(this.acueductoDataSet.PREDIOS);
-            // TODO: esta línea de código carga datos en la tabla 'dataSet1.FACTURAS' Puede moverla o quitarla según sea necesario.
-
-            //this.pREDIOSTableAdapter.Fill(this.dataSet1.PREDIOS);
-            // TODO: esta línea de código carga datos en la tabla 'dataSet1.PROPIETARIOS' Puede moverla o quitarla según sea necesario.
-            this.pROPIETARIOSTableAdapter.Fill(this.dataSet1.PROPIETARIOS);
-            // TODO: esta línea de código carga datos en la tabla 'acueductoDataSet.USUARIOS' Puede moverla o quitarla según sea necesario.
-            this.uSUARIOSTableAdapter.Fill(this.acueductoDataSet.USUARIOS);
-
+            if (MessageBox.Show("¿Desea salir?", "Notificación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.Close();
+                Login login = new Login();
+                login.Show();
+            }
         }
 
-        private void panelUsuario_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureMinimize_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
-        }
-
-        private void pictureNormal_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Normal;
-        }
-
-        private void btnReportePredio_Click(object sender, EventArgs e)
-        {
-            Cursor.Current = Cursors.WaitCursor;
-
-          //Traigo el reportePredio
-             Reportes.CrystalReportPredios reportDatos = new Reportes.CrystalReportPredios();
-
-             //Traer los datos y arreglar Datos
-
-              this.pREDIOSTableAdapter.Fill(this.dataSet1.PREDIOS);
-                reportDatos.SetDataSource(this.acueductoDataSet);
-
-              //Traer Form
-
-               Reportes.FrmReportPredio reportePredio = new Reportes.FrmReportPredio();
-               reportePredio.crystalReportViewer1.ReportSource = reportDatos;
-              reportePredio.ShowDialog();
-                reportePredio.Close();
-               hideSubmenu();
-
         }
     }
 }

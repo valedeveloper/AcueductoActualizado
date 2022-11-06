@@ -26,21 +26,6 @@ namespace AqueaductoApp.CapaVistas
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //abrir archivo 
-            using (OpenFileDialog dialog = new OpenFileDialog())
-            {
-                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    txtFile.Text = dialog.FileName;
-
-                }
-            }
-
-
-        }
-
 
 
         private void textBox5_DragOver(object sender, DragEventArgs e)
@@ -156,35 +141,7 @@ namespace AqueaductoApp.CapaVistas
             }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            //abrir archivo 
-            using (OpenFileDialog dialog = new OpenFileDialog())
-            {
-                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-
-                    txtFile.Text = dialog.FileName;
-                    cadenaArchivo = txtFile.Text;
-                    this.pictureUser.Image = Image.FromFile(this.txtFile.Text);
-
-
-                    //leer una imagen => un objeto de clase Bynari=> Binary a bit (Usamos el tableAdapterUsuario INSERT) =
-                    //****** LEER FILE******
-                    FileStream stream = new FileStream(this.txtFile.Text, FileMode.Open, FileAccess.Read);
-                    /// Leer Archivo stream y convertilo en binario
-                    /// 
-                    BinaryReader read = new BinaryReader(stream);
-
-                    ///**** Guarda los binary en un archivo de bites
-                    ///
-                    photo = read.ReadBytes((int)stream.Length);
-
-
-                }
-            }
-        }
-
+     
         private void comboEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (this.comboEstado.Text == "Activo")
@@ -204,7 +161,7 @@ namespace AqueaductoApp.CapaVistas
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            CapaDatos.DataSet1TableAdapters.USUARIOSTableAdapter userCedula = new CapaDatos.DataSet1TableAdapters.USUARIOSTableAdapter();
+            CapaDatos.AcueductoDataSetTableAdapters.USUARIOSTableAdapter userCedula = new CapaDatos.AcueductoDataSetTableAdapters.USUARIOSTableAdapter();
             int user = (int)userCedula.validarCedulaUser(this.txtCedula.Text);
 
             if (user==0)
@@ -316,6 +273,40 @@ namespace AqueaductoApp.CapaVistas
 
         private void txtCorreo_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog dialog = new OpenFileDialog())
+            {
+                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+
+                    txtFile.Text = dialog.FileName;
+                    cadenaArchivo = txtFile.Text;
+                    this.pictureUser.Image = Image.FromFile(this.txtFile.Text);
+
+
+                    //leer una imagen => un objeto de clase Bynari=> Binary a bit (Usamos el tableAdapterUsuario INSERT) =
+                    //****** LEER FILE******
+                    FileStream stream = new FileStream(this.txtFile.Text, FileMode.Open, FileAccess.Read);
+                    /// Leer Archivo stream y convertilo en binario
+                    /// 
+                    BinaryReader read = new BinaryReader(stream);
+
+                    ///**** Guarda los binary en un archivo de bites
+                    ///
+                    photo = read.ReadBytes((int)stream.Length);
+
+
+                }
+            }
 
         }
     }

@@ -92,13 +92,8 @@ namespace AqueaductoApp.CapaVistas
             }
             else
             {
-                if (this.txtEstrato.Text == "")
-                {
-                    MessageBox.Show("Digite el Estrato del Predio", "Notificación");
-                }
-                else
-                {
-                    if (this.txtMetros.Text == "")
+               
+                 if (this.txtMetros.Text == "")
                     {
                         MessageBox.Show("Digite el Consumo en Metros Cúbicos", "Notificación");
                     }
@@ -178,7 +173,7 @@ namespace AqueaductoApp.CapaVistas
 
 
                     }
-                }
+                
             }
         }
 
@@ -211,7 +206,7 @@ namespace AqueaductoApp.CapaVistas
                     //    {
 
                             Int64 consecutivoFact = Int64.Parse(consec);
-                            facturas.InsertarFactura(consec, this.txtCatastro.Text, fechaConsumo, cedula, namePropietario, celular, correo, strato, barrio, id, int.Parse(this.totalFactura.Text), estado, ms, mQr, mesConsumo, metrosConsumo);
+                            facturas.InsertarFactura(consec, this.txtCatastro.Text, fechaConsumo, cedula, namePropietario, celular, correo, id, int.Parse(this.totalFactura.Text), estado, ms, mQr, mesConsumo, metrosConsumo);
 
 
 
@@ -219,7 +214,6 @@ namespace AqueaductoApp.CapaVistas
                             MessageBox.Show("Factura Agregada", "Notiicación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.labelConsecutivo.Visible = false; ;
                             this.txtCatastro.Text = "";
-                            this.txtEstrato.Text = "";
                             this.txtMetros.Text = "";
                             //this.pictureQr.Image = null;
                             //this.CodigoDeBarras.Image = null;
@@ -260,6 +254,10 @@ namespace AqueaductoApp.CapaVistas
 
         private void FrmAgregarFactura_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dataSet1.BARRIOS' Puede moverla o quitarla según sea necesario.
+            this.bARRIOSTableAdapter.Fill(this.dataSet1.BARRIOS);
+            // TODO: esta línea de código carga datos en la tabla 'dataSet1.ESTRATOS' Puede moverla o quitarla según sea necesario.
+            this.eSTRATOSTableAdapter.Fill(this.dataSet1.ESTRATOS);
 
             // TODO: esta línea de código carga datos en la tabla 'dataSet1.PREDIOS' Puede moverla o quitarla según sea necesario.
             this.pREDIOSTableAdapter.Fill(this.dataSet1.PREDIOS);
@@ -273,8 +271,7 @@ namespace AqueaductoApp.CapaVistas
             this.txtCatastro.Text = catastro;
             cedula = GridPredio.CurrentRow.Cells[2].Value.ToString();
             strato = GridPredio.CurrentRow.Cells[3].Value.ToString();
-            this.txtEstrato.Text = strato;
-            barrio = GridPredio.CurrentRow.Cells[4].Value.ToString();
+            
 
 
 
@@ -320,7 +317,6 @@ namespace AqueaductoApp.CapaVistas
                 {
                     MessageBox.Show("No existe consumos para este predio. Agregar Consumo");
                     this.txtCatastro.Text = "";
-                    this.txtEstrato.Text = "";
 
                 }
                 else
@@ -347,13 +343,27 @@ namespace AqueaductoApp.CapaVistas
 
         private void txtEstrato_TextChanged(object sender, EventArgs e)
         {
-            CapaDatos.DataSet1TableAdapters.CONSUMOSTableAdapter consumos = new CapaDatos.DataSet1TableAdapters.CONSUMOSTableAdapter();
-            int existenciaDatos = (int)consumos.validarDatosConsumo(this.txtCatastro.Text);
-            if (existenciaDatos == 0)
-            {
-                this.txtEstrato.Text = "";
+        }
 
-            }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_TextChanged(object sender, EventArgs e)
+        {
+
+            //CapaDatos.DataSet1TableAdapters.PREDIOSTableAdapter estratos = new CapaDatos.DataSet1TableAdapters.PREDIOSTableAdapter();
+            //int datoEstrato = (int)estratos.traerEstrato(this.comboCatastro.ValueMember.ToString());
+            //if (datoEstrato == 0)
+            //{
+            //    this.txtEstrato.Text = "";
+
+            //}
+            //    else {
+            //    this.txtEstrato.Text= datoEstrato.ToString();
+            //        }
+
         }
     }
 } 

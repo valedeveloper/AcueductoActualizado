@@ -91,18 +91,13 @@ namespace AqueaductoApp
             }
         }
 
-        private void cONSUMOSBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.cONSUMOSBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.acueductoDataSet);
-
-        }
+        
 
         private void menuDigitador_Load_1(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dataSet1.CONSUMOS' Puede moverla o quitarla según sea necesario.
+            this.cONSUMOSTableAdapter.Fill(this.dataSet1.CONSUMOS);
             // TODO: esta línea de código carga datos en la tabla 'acueductoDataSet.CONSUMOS' Puede moverla o quitarla según sea necesario.
-            this.cONSUMOSTableAdapter.Fill(this.acueductoDataSet.CONSUMOS);
 
         }
 
@@ -112,8 +107,6 @@ namespace AqueaductoApp
             Reportes.CrystalReportConsumos reportDatos = new Reportes.CrystalReportConsumos();
 
             //Traer los datos
-            this.cONSUMOSTableAdapter.Fill(this.acueductoDataSet.CONSUMOS);
-            reportDatos.SetDataSource(this.acueductoDataSet);
 
             Cursor.Current = Cursors.Default;
 

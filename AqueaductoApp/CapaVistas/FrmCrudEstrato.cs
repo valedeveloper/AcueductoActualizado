@@ -35,13 +35,49 @@ namespace AqueaductoApp.CapaVistas
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
             CapaDatos.DataSet1TableAdapters.ESTRATOSTableAdapter estratoInsertar = new CapaDatos.DataSet1TableAdapters.ESTRATOSTableAdapter();
-            estratoInsertar.InsertarEstrato(this.txtNumeroEstrato.Text);
+            estratoInsertar.InsertarEstrato(this.comboEstrato.Text);
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            CapaDatos.DataSet1TableAdapters.ESTRATOSTableAdapter estratoModificar = new CapaDatos.DataSet1TableAdapters.ESTRATOSTableAdapter();
-            estratoModificar.ModificarEstrato(this.txtNumeroEstrato.Text,int.Parse(this.txtIdEstrato.Text));
+         
+        }
+
+        private void txtIdEstrato_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if(this.comboEstrato.Text=="")
+            {
+                MessageBox.Show("Digite el estrato");
+            }
+            else
+            {
+                CapaDatos.DataSet1TableAdapters.ESTRATOSTableAdapter estratoInsertar = new CapaDatos.DataSet1TableAdapters.ESTRATOSTableAdapter();
+                estratoInsertar.InsertarEstrato(this.comboEstrato.Text);
+
+
+                MessageBox.Show("Estrato Agregado", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.comboEstrato.Text = "";
+            }
+        }
+
+        private void eSTRATOSDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea cancelar el proceso?", "Notificación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.comboEstrato.Text = "";
+                //Recarfar Data Grid
+                this.eSTRATOSTableAdapter.Fill(this.dataSet1.ESTRATOS);
+            }
         }
     }
 }

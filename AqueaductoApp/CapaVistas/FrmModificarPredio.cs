@@ -28,7 +28,7 @@ namespace AqueaductoApp.CapaVistas
         {
 
             CapaDatos.DataSet1TableAdapters.PREDIOSTableAdapter predioExistencia = new CapaDatos.DataSet1TableAdapters.PREDIOSTableAdapter();
-            int predioExist = (int)predioExistencia.validarExistenciaCatastro(this.txtCatastro.Text);
+            int predioExist = (int)predioExistencia.validarPredio(this.txtCatastro.Text);
 
             if (predioExist == 0 || this.txtCatastro.Text==catastro )
             {
@@ -66,7 +66,7 @@ namespace AqueaductoApp.CapaVistas
                                     int cedula = int.Parse(this.txtCedula.Text);
                                     //Casa
                                     CapaDatos.DataSet1TableAdapters.PREDIOSTableAdapter TPR = new CapaDatos.DataSet1TableAdapters.PREDIOSTableAdapter();
-                                    TPR.ModificarPredio(this.txtCatastro.Text, this.txtCedula.Text, this.comboEstrato.Text, this.comboBarrio.Text, estado, id);
+                                    TPR.ModificarPredio(this.txtCatastro.Text, this.txtCedula.Text, int.Parse(this.comboEstrato.Text), int.Parse(this.comboBarrio.Text), estado, id);
 
 
 
@@ -202,7 +202,6 @@ namespace AqueaductoApp.CapaVistas
             // TODO: esta línea de código carga datos en la tabla 'dataSet1.ESTRATOS' Puede moverla o quitarla según sea necesario.
             this.eSTRATOSTableAdapter.Fill(this.dataSet1.ESTRATOS);
             // TODO: esta línea de código carga datos en la tabla 'acueductoDataSet.BARRIOS' Puede moverla o quitarla según sea necesario.
-            this.bARRIOSTableAdapter.Fill(this.acueductoDataSet.BARRIOS);
             // TODO: esta línea de código carga datos en la tabla 'dataSet1.PREDIOS' Puede moverla o quitarla según sea necesario.
             this.pREDIOSTableAdapter1.Fill(this.dataSet1.PREDIOS);
             // TODO: esta línea de código carga datos en la tabla 'acueductoDataSet.PREDIOS' Puede moverla o quitarla según sea necesario.
@@ -225,21 +224,12 @@ namespace AqueaductoApp.CapaVistas
             index = comboEstrato.FindString(estrato);
             string cedula = GridPredio.CurrentRow.Cells[2].Value.ToString();
             this.txtCedula.Text = cedula;
+            CapaDatos.DataSet1TableAdapters.PREDIOSTableAdapter predioExistencia = new CapaDatos.DataSet1TableAdapters.PREDIOSTableAdapter();
+            estado = int.Parse(GridPredio.CurrentRow.Cells[5].Value.ToString());
 
-            estadoPropi = GridPredio.CurrentRow.Cells[5].Value.ToString();
-            //Poner el estado en el comboBox
-            if (estadoPropi == "1")
-            {
-                estadoStri = "Activo";
-                int index = comboEstado.FindString(estadoStri);
-                comboEstado.SelectedIndex = index;
-            }
-            else
-            {
-                estadoStri = "Inactivo";
-                int index = comboEstado.FindString(estadoStri);
-                comboEstado.SelectedIndex = index;
-            }
+
+                
+
 
         }
 

@@ -45,10 +45,11 @@ namespace AqueaductoApp
             this.pictureMinimize = new System.Windows.Forms.PictureBox();
             this.pictureClose = new System.Windows.Forms.PictureBox();
             this.panelDerecho = new System.Windows.Forms.Panel();
-            this.acueductoDataSet = new AqueaductoApp.AcueductoDataSet();
             this.cONSUMOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cONSUMOSTableAdapter = new AqueaductoApp.AcueductoDataSetTableAdapters.CONSUMOSTableAdapter();
-            this.tableAdapterManager = new AqueaductoApp.AcueductoDataSetTableAdapters.TableAdapterManager();
+            this.dataSet1 = new AqueaductoApp.CapaDatos.DataSet1();
+            this.cONSUMOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cONSUMOSTableAdapter = new AqueaductoApp.CapaDatos.DataSet1TableAdapters.CONSUMOSTableAdapter();
+            this.tableAdapterManager = new AqueaductoApp.CapaDatos.DataSet1TableAdapters.TableAdapterManager();
             this.panelItem.SuspendLayout();
             this.panelSubmenuConsumo.SuspendLayout();
             this.panelUsuario.SuspendLayout();
@@ -56,8 +57,9 @@ namespace AqueaductoApp
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.acueductoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cONSUMOSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cONSUMOSBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelItem
@@ -270,15 +272,19 @@ namespace AqueaductoApp
             this.panelDerecho.Size = new System.Drawing.Size(560, 647);
             this.panelDerecho.TabIndex = 2;
             // 
-            // acueductoDataSet
-            // 
-            this.acueductoDataSet.DataSetName = "AcueductoDataSet";
-            this.acueductoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // cONSUMOSBindingSource
             // 
             this.cONSUMOSBindingSource.DataMember = "CONSUMOS";
-            this.cONSUMOSBindingSource.DataSource = this.acueductoDataSet;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cONSUMOSBindingSource1
+            // 
+            this.cONSUMOSBindingSource1.DataMember = "CONSUMOS";
+            this.cONSUMOSBindingSource1.DataSource = this.dataSet1;
             // 
             // cONSUMOSTableAdapter
             // 
@@ -287,11 +293,13 @@ namespace AqueaductoApp
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BARRIOSTableAdapter = null;
             this.tableAdapterManager.CONSUMOSTableAdapter = this.cONSUMOSTableAdapter;
+            this.tableAdapterManager.ESTRATOSTableAdapter = null;
             this.tableAdapterManager.FACTURASTableAdapter = null;
             this.tableAdapterManager.PREDIOSTableAdapter = null;
             this.tableAdapterManager.PROPIETARIOSTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = AqueaductoApp.AcueductoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = AqueaductoApp.CapaDatos.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.USUARIOSTableAdapter = null;
             // 
             // menuDigitador
@@ -306,6 +314,7 @@ namespace AqueaductoApp
             this.Name = "menuDigitador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Digitador";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.menuDigitador_Load_1);
             this.panelItem.ResumeLayout(false);
             this.panelSubmenuConsumo.ResumeLayout(false);
@@ -315,8 +324,9 @@ namespace AqueaductoApp
             this.panelTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.acueductoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cONSUMOSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cONSUMOSBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -333,13 +343,14 @@ namespace AqueaductoApp
         private FontAwesome.Sharp.IconButton btnModificarLectura;
         private System.Windows.Forms.PictureBox pictureClose;
         private FontAwesome.Sharp.IconButton btnReportes;
-        private AcueductoDataSet acueductoDataSet;
         private System.Windows.Forms.BindingSource cONSUMOSBindingSource;
-        private AcueductoDataSetTableAdapters.CONSUMOSTableAdapter cONSUMOSTableAdapter;
-        private AcueductoDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Label labelRol;
         private System.Windows.Forms.Label labelNombre;
         private System.Windows.Forms.PictureBox pictureMinimize;
         private CapaModelos.PictureRound pictureRound1;
+        private CapaDatos.DataSet1 dataSet1;
+        private System.Windows.Forms.BindingSource cONSUMOSBindingSource1;
+        private CapaDatos.DataSet1TableAdapters.CONSUMOSTableAdapter cONSUMOSTableAdapter;
+        private CapaDatos.DataSet1TableAdapters.TableAdapterManager tableAdapterManager;
     }
 }

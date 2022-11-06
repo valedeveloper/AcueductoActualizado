@@ -176,11 +176,11 @@ namespace AqueaductoApp.CapaVistas
 
                                     }
 
-                                   
+
 
                                     //Recargar DataGrid
-                                    CapaDatos.DataSet1TableAdapters.USUARIOSTableAdapter TU = new CapaDatos.DataSet1TableAdapters.USUARIOSTableAdapter();
-                                    CapaDatos.DataSet1.USUARIOSDataTable ta = TU.GetData();
+                                    CapaDatos.AcueductoDataSetTableAdapters.USUARIOSTableAdapter TU = new CapaDatos.AcueductoDataSetTableAdapters.USUARIOSTableAdapter();
+                                    CapaDatos.AcueductoDataSet.USUARIOSDataTable ta = TU.GetData();
                                     GridUser.DataSource = ta;
 
 
