@@ -224,6 +224,8 @@ namespace AqueaductoApp.CapaVistas
 
         private void FrmagregarPredio_Load(object sender, EventArgs e)
         {
+// TODO: esta línea de código carga datos en la tabla 'dataSet1.PREDIOS' Puede moverla o quitarla según sea necesario.
+this.pREDIOSTableAdapter.Fill(this.dataSet1.PREDIOS);
             // TODO: esta línea de código carga datos en la tabla 'dataSet1.ESTRATOS' Puede moverla o quitarla según sea necesario.
             this.eSTRATOSTableAdapter.Fill(this.dataSet1.ESTRATOS);
             // TODO: esta línea de código carga datos en la tabla 'dataSet1.BARRIOS' Puede moverla o quitarla según sea necesario.

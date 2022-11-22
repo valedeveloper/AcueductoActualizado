@@ -50,18 +50,32 @@ namespace AqueaductoApp.CapaVistas
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if(this.comboEstrato.Text=="")
+            CapaDatos.DataSet1TableAdapters.ESTRATOSTableAdapter estratoInsertar = new CapaDatos.DataSet1TableAdapters.ESTRATOSTableAdapter();
+            int validarEstrato = (int)estratoInsertar.validarEstrato(this.comboEstrato.Text);
+
+            if (this.comboEstrato.Text=="")
             {
                 MessageBox.Show("Digite el estrato");
             }
             else
             {
-                CapaDatos.DataSet1TableAdapters.ESTRATOSTableAdapter estratoInsertar = new CapaDatos.DataSet1TableAdapters.ESTRATOSTableAdapter();
-                estratoInsertar.InsertarEstrato(this.comboEstrato.Text);
+                if(validarEstrato==0)
+                {
+                    estratoInsertar.InsertarEstrato(this.comboEstrato.Text);
+                    MessageBox.Show("Estrato Agregado", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.comboEstrato.Text = "";
+                    this.eSTRATOSTableAdapter.Fill(this.dataSet1.ESTRATOS);
 
 
-                MessageBox.Show("Estrato Agregado", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.comboEstrato.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Ya existe el estrato", "Notificaciòn");
+                }
+
+
+
+       
             }
         }
 

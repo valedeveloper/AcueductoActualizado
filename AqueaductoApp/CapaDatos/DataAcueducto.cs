@@ -8,9 +8,12 @@
 }
 
 
-namespace AqueaductoApp.CapaDatos.DataSet1TableAdapters {
-    
-    
+namespace AqueaductoApp.CapaDatos.DataSet1TableAdapters
+{
+    partial class PREDIOSTableAdapter
+    {
+    }
+
     public partial class BARRIOSTableAdapter {
     }
 }

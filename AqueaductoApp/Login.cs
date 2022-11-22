@@ -42,22 +42,28 @@ namespace AqueaductoApp
                 }
                 else
                 {
-                    try
-                    {
+                   
+                    
 
                         CapaDatos.DataSet1TableAdapters.USUARIOSTableAdapter tU = new CapaDatos.DataSet1TableAdapters.USUARIOSTableAdapter();
-
+                        try
                         {
                             string cedula = tU.traerCedula(this.txtUsuario.Text, pass = CapaModelos.Encript.GetSHA256(this.txtPassword.Text)).ToString();
                             int estado=(int)tU.traerEstado(cedula);
 
-                            if(estado==1)
+                           if(cedula==null)
+                            {
+                                labelErrorUsuario.Visible = true;
+                            }
+                        else
+                        {
+                            if (estado == 1)
                             {
                                 rol = (int)tU.verRol(this.txtUsuario.Text, pass = CapaModelos.Encript.GetSHA256(this.txtPassword.Text));
                                 if (rol == 1)
                                 {
                                     this.Hide();
-                                    menuAdmin admi = new menuAdmin(this.txtUsuario.Text,pass);
+                                    menuAdmin admi = new menuAdmin(this.txtUsuario.Text, pass);
                                     admi.Show();
 
                                 }
@@ -82,15 +88,17 @@ namespace AqueaductoApp
                             }
                             else
                             {
-                                MessageBox.Show("Usted no tiene permisos suficientes","Notificación");
+                                MessageBox.Show("Usted no tiene permisos suficientes", "Notificación");
                             }
                         }
-                    }
+                        }
                     catch
                     {
                         labelErrorUsuario.Visible = true;
                     }
-                 
+
+
+
 
 
 

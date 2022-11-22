@@ -55,18 +55,21 @@ namespace AqueaductoApp.CapaVistas
 
         {
             CapaDatos.DataSet1TableAdapters.BARRIOSTableAdapter barrioInsertar = new CapaDatos.DataSet1TableAdapters.BARRIOSTableAdapter();
-            int validarBarrio = (int)barrioInsertar.validarBarrio(this.txtBarrio.Text);
 
-               if(validarBarrio==0)
+          
+
+            if (this.txtBarrio.Text == "")
             {
-                if (this.txtBarrio.Text == "")
-                {
-                    MessageBox.Show("Digite el barrio");
+                MessageBox.Show("Digite el barrio");
 
-                }
-                else
+            }
+            else
+            {
+                int validarBarrio = (int)barrioInsertar.validarBarrio(this.txtBarrio.Text);
+
+                if (validarBarrio == 0)
                 {
-                    if (this.txtPostal.Text == "" )
+                    if (this.txtPostal.Text == "")
                     {
                         MessageBox.Show("Digite el código postal");
                     }
@@ -83,14 +86,17 @@ namespace AqueaductoApp.CapaVistas
 
                     }
                 }
-               
-            }
-            else
-            {
-                MessageBox.Show("El Barrio ya existe");
-            }
+            
+                    else
+                {
+                    MessageBox.Show("El Barrio ya existe");
+                }
+           }
+                    
 
-        }
+
+
+     }
 
         private void button2_Click(object sender, EventArgs e)
         {

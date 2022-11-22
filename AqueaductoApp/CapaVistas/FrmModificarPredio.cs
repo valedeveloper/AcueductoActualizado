@@ -238,5 +238,18 @@ namespace AqueaductoApp.CapaVistas
            
 
         }
+
+        private void fillBy1ToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.bARRIOSTableAdapter1.FillBy1(this.dataSet1.BARRIOS);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }

@@ -276,7 +276,6 @@ namespace AqueaductoApp
 
         private void btnReportes_Click_1(object sender, EventArgs e)
         {
-            showSubMenu(panelsubMenuReportes);
         }
 
         private void btnBarrio_Click(object sender, EventArgs e)
@@ -292,65 +291,19 @@ namespace AqueaductoApp
 
         private void btnReportePredio_Click(object sender, EventArgs e)
         {
-            Cursor.Current = Cursors.WaitCursor;
-
-            //Traigo el reportePredio
-            Reportes.CrystalReportPredios reportDatos = new Reportes.CrystalReportPredios();
-
-            //Traer los datos y arreglar Datos
-
-            this.pREDIOSTableAdapter.Fill(this.dataSet1.PREDIOS);
-            reportDatos.SetDataSource(this.dataSet1);
-
-            //Traer Form
-
-            Reportes.FrmReportPredio reportePredio = new Reportes.FrmReportPredio();
-            reportePredio.crystalReportViewer1.ReportSource = reportDatos;
-            reportePredio.ShowDialog();
-            reportePredio.Close();
-            hideSubmenu();
+           
 
         }
 
         private void btnReportUser_Click(object sender, EventArgs e)
         {
 
-            Cursor.Current = Cursors.WaitCursor;
-            Reportes.CrystalReportUser reportDatos = new Reportes.CrystalReportUser();
-
-            //Traer los datos
-            this.uSUARIOSTableAdapter.Fill(this.dataSet1.USUARIOS);
-            reportDatos.SetDataSource(this.dataSet1);
-
-            Cursor.Current = Cursors.Default;
-
-            //Asignamos a reporte View
-            Reportes.FrmReporteUsuarios frmReporteUser = new Reportes.FrmReporteUsuarios();
-            frmReporteUser.crystalReportViewer1.ReportSource = reportDatos;
-            frmReporteUser.ShowDialog();
-            frmReporteUser.Close();
-            hideSubmenu();
+       
         }
 
         private void btnReportePropi_Click(object sender, EventArgs e)
         {
-            Cursor.Current = Cursors.WaitCursor;
-            Reportes.CrystalReportProp reportDatos = new Reportes.CrystalReportProp();
-
-            //Traer los datos
-
-            //Acomodar error
-            this.pROPIETARIOSTableAdapter.Fill(this.dataSet1.PROPIETARIOS);
-            reportDatos.SetDataSource(this.dataSet1);
-
-            Cursor.Current = Cursors.Default;
-
-            //Asignamos a reporte View
-            Reportes.FrmReportePropietario frmReporteUser = new Reportes.FrmReportePropietario();
-            frmReporteUser.crystalReportViewer1.ReportSource = reportDatos;
-            frmReporteUser.ShowDialog();
-            frmReporteUser.Close();
-            hideSubmenu();
+          
         }
 
         private void btnEstrato_Click(object sender, EventArgs e)
@@ -385,6 +338,92 @@ namespace AqueaductoApp
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnPredio_Click_1(object sender, EventArgs e)
+        {
+            showSubMenu(panelSubmenuPredio);
+
+        }
+
+        private void btnCrearPredio_Click_2(object sender, EventArgs e)
+        {
+            mostrarPanel(new FrmagregarPredio());
+            hideSubmenu();
+        }
+
+        private void btnModificarPredio_Click_2(object sender, EventArgs e)
+        {
+
+            mostrarPanel(new FrmModificarPredio());
+            hideSubmenu();
+        }
+
+        private void btnReportes_Click_2(object sender, EventArgs e)
+        {
+            showSubMenu(panelsubMenuReportes);
+
+        }
+
+        private void btnReportUser_Click_1(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            Reportes.CrystalReportUser reportDatos = new Reportes.CrystalReportUser();
+
+            //Traer los datos
+            this.uSUARIOSTableAdapter.Fill(this.dataSet1.USUARIOS);
+            reportDatos.SetDataSource(this.dataSet1);
+
+            Cursor.Current = Cursors.Default;
+
+            //Asignamos a reporte View
+            Reportes.FrmReporteUsuarios frmReporteUser = new Reportes.FrmReporteUsuarios();
+            frmReporteUser.crystalReportViewer1.ReportSource = reportDatos;
+            frmReporteUser.ShowDialog();
+            frmReporteUser.Close();
+            hideSubmenu();
+        }
+
+        private void btnReportePropi_Click_1(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            Reportes.CrystalReportProp reportDatos = new Reportes.CrystalReportProp();
+
+            //Traer los datos
+
+            //Acomodar error
+            this.pROPIETARIOSTableAdapter.Fill(this.dataSet1.PROPIETARIOS);
+            reportDatos.SetDataSource(this.dataSet1);
+
+            Cursor.Current = Cursors.Default;
+
+            //Asignamos a reporte View
+            Reportes.FrmReportePropietario frmReporteUser = new Reportes.FrmReportePropietario();
+            frmReporteUser.crystalReportViewer1.ReportSource = reportDatos;
+            frmReporteUser.ShowDialog();
+            frmReporteUser.Close();
+            hideSubmenu();
+        }
+
+        private void btnReportePredio_Click_1(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+
+            //Traigo el reportePredio
+            Reportes.CrystalReportPredios reportDatos = new Reportes.CrystalReportPredios();
+
+            //Traer los datos y arreglar Datos
+
+            this.pREDIOSTableAdapter.Fill(this.dataSet1.PREDIOS);
+            reportDatos.SetDataSource(this.dataSet1);
+
+            //Traer Form
+
+            Reportes.FrmReportPredio reportePredio = new Reportes.FrmReportPredio();
+            reportePredio.crystalReportViewer1.ReportSource = reportDatos;
+            reportePredio.ShowDialog();
+            reportePredio.Close();
+            hideSubmenu();
         }
     }
 }
