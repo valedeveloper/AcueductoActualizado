@@ -27,10 +27,10 @@ namespace AqueaductoApp.CapaVistas
 
         private void FrmCrudBarri_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'dataSet1.BARRIOS' Puede moverla o quitarla según sea necesario.
-            this.bARRIOSTableAdapter.Fill(this.dataSet1.BARRIOS);
-            // TODO: esta línea de código carga datos en la tabla 'dataSet1.CONSUMOS' Puede moverla o quitarla según sea necesario.
-            this.cONSUMOSTableAdapter.Fill(this.dataSet1.CONSUMOS);
+            //// TODO: esta línea de código carga datos en la tabla 'dataSet1.BARRIOS' Puede moverla o quitarla según sea necesario.
+            //this.bARRIOSTableAdapter.Fill(this.dataSet1.BARRIOS);
+            //// TODO: esta línea de código carga datos en la tabla 'dataSet1.CONSUMOS' Puede moverla o quitarla según sea necesario.
+            //this.cONSUMOSTableAdapter.Fill(this.dataSet1.CONSUMOS);
 
         }
 

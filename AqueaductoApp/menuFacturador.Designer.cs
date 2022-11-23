@@ -92,7 +92,7 @@ namespace AqueaductoApp
             // 
             // btnImpresas
             // 
-            this.btnImpresas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(191)))), ((int)(((byte)(227)))));
+            this.btnImpresas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
             this.btnImpresas.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnImpresas.FlatAppearance.BorderSize = 0;
             this.btnImpresas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -116,7 +116,7 @@ namespace AqueaductoApp
             // 
             // btnReportePendi
             // 
-            this.btnReportePendi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(191)))), ((int)(((byte)(227)))));
+            this.btnReportePendi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
             this.btnReportePendi.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReportePendi.FlatAppearance.BorderSize = 0;
             this.btnReportePendi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -175,7 +175,7 @@ namespace AqueaductoApp
             // 
             // btnImprimirFactura
             // 
-            this.btnImprimirFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(191)))), ((int)(((byte)(227)))));
+            this.btnImprimirFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
             this.btnImprimirFactura.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnImprimirFactura.FlatAppearance.BorderSize = 0;
             this.btnImprimirFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -199,7 +199,7 @@ namespace AqueaductoApp
             // 
             // btnNuevaFactura
             // 
-            this.btnNuevaFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(191)))), ((int)(((byte)(227)))));
+            this.btnNuevaFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
             this.btnNuevaFactura.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNuevaFactura.FlatAppearance.BorderSize = 0;
             this.btnNuevaFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

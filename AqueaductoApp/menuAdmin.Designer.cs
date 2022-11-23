@@ -120,7 +120,7 @@ namespace AqueaductoApp
             // 
             // panelsubMenuReportes
             // 
-            this.panelsubMenuReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(191)))), ((int)(((byte)(227)))));
+            this.panelsubMenuReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
             this.panelsubMenuReportes.Controls.Add(this.btnReportePredio);
             this.panelsubMenuReportes.Controls.Add(this.btnReportePropi);
             this.panelsubMenuReportes.Controls.Add(this.btnReportUser);
@@ -134,7 +134,7 @@ namespace AqueaductoApp
             // 
             // btnReportePredio
             // 
-            this.btnReportePredio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(191)))), ((int)(((byte)(227)))));
+            this.btnReportePredio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
             this.btnReportePredio.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReportePredio.FlatAppearance.BorderSize = 0;
             this.btnReportePredio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -158,7 +158,7 @@ namespace AqueaductoApp
             // 
             // btnReportePropi
             // 
-            this.btnReportePropi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(191)))), ((int)(((byte)(227)))));
+            this.btnReportePropi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
             this.btnReportePropi.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReportePropi.FlatAppearance.BorderSize = 0;
             this.btnReportePropi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -182,7 +182,7 @@ namespace AqueaductoApp
             // 
             // btnReportUser
             // 
-            this.btnReportUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(191)))), ((int)(((byte)(227)))));
+            this.btnReportUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
             this.btnReportUser.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReportUser.FlatAppearance.BorderSize = 0;
             this.btnReportUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -244,7 +244,7 @@ namespace AqueaductoApp
             // 
             // btnModificarPredio
             // 
-            this.btnModificarPredio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(191)))), ((int)(((byte)(227)))));
+            this.btnModificarPredio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
             this.btnModificarPredio.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnModificarPredio.FlatAppearance.BorderSize = 0;
             this.btnModificarPredio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -268,7 +268,7 @@ namespace AqueaductoApp
             // 
             // btnCrearPredio
             // 
-            this.btnCrearPredio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(191)))), ((int)(((byte)(227)))));
+            this.btnCrearPredio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
             this.btnCrearPredio.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCrearPredio.FlatAppearance.BorderSize = 0;
             this.btnCrearPredio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -377,7 +377,7 @@ namespace AqueaductoApp
             // 
             // btnModificarPropietario
             // 
-            this.btnModificarPropietario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(191)))), ((int)(((byte)(227)))));
+            this.btnModificarPropietario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
             this.btnModificarPropietario.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnModificarPropietario.FlatAppearance.BorderSize = 0;
             this.btnModificarPropietario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -401,7 +401,7 @@ namespace AqueaductoApp
             // 
             // btnCrearPropietario
             // 
-            this.btnCrearPropietario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(191)))), ((int)(((byte)(227)))));
+            this.btnCrearPropietario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
             this.btnCrearPropietario.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCrearPropietario.FlatAppearance.BorderSize = 0;
             this.btnCrearPropietario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -462,7 +462,7 @@ namespace AqueaductoApp
             // 
             // btnModificarUsuario
             // 
-            this.btnModificarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(191)))), ((int)(((byte)(227)))));
+            this.btnModificarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
             this.btnModificarUsuario.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnModificarUsuario.FlatAppearance.BorderSize = 0;
             this.btnModificarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -486,7 +486,7 @@ namespace AqueaductoApp
             // 
             // btnCrearUsuario
             // 
-            this.btnCrearUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(191)))), ((int)(((byte)(227)))));
+            this.btnCrearUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
             this.btnCrearUsuario.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCrearUsuario.FlatAppearance.BorderSize = 0;
             this.btnCrearUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

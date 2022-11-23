@@ -112,7 +112,7 @@ namespace AqueaductoApp
             // 
             // btnModificarLectura
             // 
-            this.btnModificarLectura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(191)))), ((int)(((byte)(227)))));
+            this.btnModificarLectura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
             this.btnModificarLectura.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnModificarLectura.FlatAppearance.BorderSize = 0;
             this.btnModificarLectura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -136,7 +136,7 @@ namespace AqueaductoApp
             // 
             // btnNuevaLectura
             // 
-            this.btnNuevaLectura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(191)))), ((int)(((byte)(227)))));
+            this.btnNuevaLectura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
             this.btnNuevaLectura.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNuevaLectura.FlatAppearance.BorderSize = 0;
             this.btnNuevaLectura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

@@ -82,6 +82,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcueductoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AcueductoDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CapaDatos\AcueductoDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -407,6 +412,17 @@
     <EmbeddedResource Include="Reportes\FrmReportPredio.resx">
       <DependentUpon>FrmReportPredio.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="AcueductoDataSet.xsc">
+      <DependentUpon>AcueductoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AcueductoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AcueductoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AcueductoDataSet.xss">
+      <DependentUpon>AcueductoDataSet.xsd</DependentUpon>
+    </None>
     <None Include="CapaDatos\AcueductoDataSet.xsc">
       <DependentUpon>AcueductoDataSet.xsd</DependentUpon>
     </None>
