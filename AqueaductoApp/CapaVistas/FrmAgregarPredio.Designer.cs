@@ -45,6 +45,7 @@ namespace AqueaductoApp.CapaVistas
             this.comboEstrato = new System.Windows.Forms.ComboBox();
             this.eSTRATOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new AqueaductoApp.CapaDatos.DataSet1();
+            this.eSTRATOSPREDIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eSTRATOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBarrio = new System.Windows.Forms.ComboBox();
             this.bARRIOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -74,9 +75,9 @@ namespace AqueaductoApp.CapaVistas
             this.fKPREDIOSESTRATOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fKBARRIOSPREDIOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.fKBARRIOSPREDIOSBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.eSTRATOSBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eSTRATOSPREDIOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eSTRATOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bARRIOSBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bARRIOSBindingSource2)).BeginInit();
@@ -87,7 +88,6 @@ namespace AqueaductoApp.CapaVistas
             ((System.ComponentModel.ISupportInitialize)(this.fKPREDIOSESTRATOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKBARRIOSPREDIOSBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKBARRIOSPREDIOSBindingSource2)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button2
@@ -126,7 +126,7 @@ namespace AqueaductoApp.CapaVistas
             this.txtCedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCedula.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtCedula.ForeColor = System.Drawing.Color.White;
-            this.txtCedula.Location = new System.Drawing.Point(288, 239);
+            this.txtCedula.Location = new System.Drawing.Point(312, 115);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.ReadOnly = true;
             this.txtCedula.Size = new System.Drawing.Size(139, 16);
@@ -175,7 +175,7 @@ namespace AqueaductoApp.CapaVistas
             // 
             this.comboEstrato.BackColor = System.Drawing.Color.WhiteSmoke;
             this.comboEstrato.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.eSTRATOSBindingSource1, "Id_Estrato", true));
-            this.comboEstrato.DataSource = this.eSTRATOSBindingSource;
+            this.comboEstrato.DataSource = this.eSTRATOSPREDIOSBindingSource;
             this.comboEstrato.DisplayMember = "Id_Estrato";
             this.comboEstrato.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboEstrato.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
@@ -198,6 +198,11 @@ namespace AqueaductoApp.CapaVistas
             this.dataSet1.DataSetName = "DataSet1";
             this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // eSTRATOSPREDIOSBindingSource
+            // 
+            this.eSTRATOSPREDIOSBindingSource.DataMember = "ESTRATOS_PREDIOS";
+            this.eSTRATOSPREDIOSBindingSource.DataSource = this.eSTRATOSBindingSource;
+            // 
             // eSTRATOSBindingSource
             // 
             this.eSTRATOSBindingSource.DataMember = "ESTRATOS";
@@ -208,7 +213,7 @@ namespace AqueaductoApp.CapaVistas
             this.comboBarrio.BackColor = System.Drawing.Color.WhiteSmoke;
             this.comboBarrio.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bARRIOSBindingSource1, "Id_Barrio", true));
             this.comboBarrio.DataSource = this.bARRIOSBindingSource2;
-            this.comboBarrio.DisplayMember = "Id_Barrio";
+            this.comboBarrio.DisplayMember = "Nombre_Barrio";
             this.comboBarrio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBarrio.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
             this.comboBarrio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(138)))));
@@ -217,7 +222,7 @@ namespace AqueaductoApp.CapaVistas
             this.comboBarrio.Name = "comboBarrio";
             this.comboBarrio.Size = new System.Drawing.Size(139, 24);
             this.comboBarrio.TabIndex = 78;
-            this.comboBarrio.ValueMember = "Nombre_Barrio";
+            this.comboBarrio.ValueMember = "Id_Barrio";
             this.comboBarrio.SelectedIndexChanged += new System.EventHandler(this.comboBarrio_SelectedIndexChanged);
             this.comboBarrio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBarrio_KeyPress);
             // 
@@ -288,7 +293,7 @@ namespace AqueaductoApp.CapaVistas
             this.GridPropietario.DefaultCellStyle = dataGridViewCellStyle6;
             this.GridPropietario.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.GridPropietario.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.GridPropietario.Location = new System.Drawing.Point(101, 95);
+            this.GridPropietario.Location = new System.Drawing.Point(105, 156);
             this.GridPropietario.Name = "GridPropietario";
             this.GridPropietario.ReadOnly = true;
             this.GridPropietario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -296,7 +301,7 @@ namespace AqueaductoApp.CapaVistas
             this.GridPropietario.RowHeadersWidth = 42;
             this.GridPropietario.RowTemplate.Height = 25;
             this.GridPropietario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.GridPropietario.Size = new System.Drawing.Size(357, 113);
+            this.GridPropietario.Size = new System.Drawing.Size(367, 113);
             this.GridPropietario.TabIndex = 85;
             this.GridPropietario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridPredio_CellContentClick_1);
             // 
@@ -446,7 +451,7 @@ namespace AqueaductoApp.CapaVistas
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.DimGray;
-            this.label9.Location = new System.Drawing.Point(111, 239);
+            this.label9.Location = new System.Drawing.Point(135, 115);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(142, 16);
             this.label9.TabIndex = 84;
@@ -463,7 +468,7 @@ namespace AqueaductoApp.CapaVistas
             // 
             // fKPREDIOSESTRATOSBindingSource
             // 
-            this.fKPREDIOSESTRATOSBindingSource.DataMember = "FK_PREDIOS_ESTRATOS";
+            this.fKPREDIOSESTRATOSBindingSource.DataMember = "ESTRATOS_PREDIOS";
             this.fKPREDIOSESTRATOSBindingSource.DataSource = this.eSTRATOSBindingSource1;
             // 
             // fKBARRIOSPREDIOSBindingSource1
@@ -476,22 +481,12 @@ namespace AqueaductoApp.CapaVistas
             this.fKBARRIOSPREDIOSBindingSource2.DataMember = "FK_BARRIOS_PREDIOS";
             this.fKBARRIOSPREDIOSBindingSource2.DataSource = this.bARRIOSBindingSource;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(586, 50);
-            this.panel1.TabIndex = 86;
-            // 
             // FrmagregarPredio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(586, 581);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.GridPropietario);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtCatastro);
@@ -507,6 +502,7 @@ namespace AqueaductoApp.CapaVistas
             this.Controls.Add(this.txtCedula);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.label3);
             this.ForeColor = System.Drawing.Color.Gainsboro;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmagregarPredio";
@@ -514,6 +510,7 @@ namespace AqueaductoApp.CapaVistas
             this.Load += new System.EventHandler(this.FrmagregarPredio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.eSTRATOSBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eSTRATOSPREDIOSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eSTRATOSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bARRIOSBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bARRIOSBindingSource2)).EndInit();
@@ -524,8 +521,6 @@ namespace AqueaductoApp.CapaVistas
             ((System.ComponentModel.ISupportInitialize)(this.fKPREDIOSESTRATOSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKBARRIOSPREDIOSBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKBARRIOSPREDIOSBindingSource2)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -570,6 +565,6 @@ namespace AqueaductoApp.CapaVistas
         private System.Windows.Forms.BindingSource fKPREDIOSESTRATOSBindingSource;
         private System.Windows.Forms.BindingSource fKBARRIOSPREDIOSBindingSource1;
         private System.Windows.Forms.BindingSource fKBARRIOSPREDIOSBindingSource2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.BindingSource eSTRATOSPREDIOSBindingSource;
     }
 }
