@@ -63,7 +63,7 @@ namespace AqueaductoApp
                                 if (rol == 1)
                                 {
                                     this.Hide();
-                                    menuAdmin admi = new menuAdmin(/*this.txtUsuario.Text, pass*/);
+                                    menuAdmin admi = new menuAdmin(this.txtUsuario.Text, pass);
                                     admi.Show();
 
                                 }

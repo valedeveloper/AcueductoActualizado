@@ -55,6 +55,7 @@ namespace AqueaductoApp
             this.panelUsuario = new System.Windows.Forms.Panel();
             this.labelRol = new System.Windows.Forms.Label();
             this.labelNombre = new System.Windows.Forms.Label();
+            this.pictureRound1 = new AqueaductoApp.CapaModelos.PictureRound();
             this.panelTop = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -67,7 +68,6 @@ namespace AqueaductoApp
             this.uSUARIOSTableAdapter = new AqueaductoApp.CapaDatos.DataSet1TableAdapters.USUARIOSTableAdapter();
             this.pREDIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uSUARIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pictureRound1 = new AqueaductoApp.CapaModelos.PictureRound();
             this.panel1.SuspendLayout();
             this.panel.SuspendLayout();
             this.panelsubMenuReportes.SuspendLayout();
@@ -75,6 +75,7 @@ namespace AqueaductoApp
             this.panelSubmenuCliente.SuspendLayout();
             this.panelSubmenuUsuario.SuspendLayout();
             this.panelUsuario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureRound1)).BeginInit();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -82,7 +83,6 @@ namespace AqueaductoApp
             ((System.ComponentModel.ISupportInitialize)(this.pROPIETARIOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pREDIOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureRound1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -568,6 +568,21 @@ namespace AqueaductoApp
             this.labelNombre.TabIndex = 0;
             this.labelNombre.Text = "Nombre";
             // 
+            // pictureRound1
+            // 
+            this.pictureRound1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.pictureRound1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
+            this.pictureRound1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.pictureRound1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.pictureRound1.BorderSize = 2;
+            this.pictureRound1.GradientAngle = 50F;
+            this.pictureRound1.Location = new System.Drawing.Point(51, 0);
+            this.pictureRound1.Name = "pictureRound1";
+            this.pictureRound1.Size = new System.Drawing.Size(112, 112);
+            this.pictureRound1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureRound1.TabIndex = 0;
+            this.pictureRound1.TabStop = false;
+            // 
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(138)))));
@@ -657,21 +672,6 @@ namespace AqueaductoApp
             this.uSUARIOSBindingSource.DataMember = "USUARIOS";
             this.uSUARIOSBindingSource.DataSource = this.dataSet1;
             // 
-            // pictureRound1
-            // 
-            this.pictureRound1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.pictureRound1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
-            this.pictureRound1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.pictureRound1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.pictureRound1.BorderSize = 2;
-            this.pictureRound1.GradientAngle = 50F;
-            this.pictureRound1.Location = new System.Drawing.Point(51, 0);
-            this.pictureRound1.Name = "pictureRound1";
-            this.pictureRound1.Size = new System.Drawing.Size(112, 112);
-            this.pictureRound1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureRound1.TabIndex = 0;
-            this.pictureRound1.TabStop = false;
-            // 
             // menuAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -686,7 +686,6 @@ namespace AqueaductoApp
             this.Name = "menuAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrador";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.menuAdmin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -698,6 +697,7 @@ namespace AqueaductoApp
             this.panelSubmenuUsuario.ResumeLayout(false);
             this.panelUsuario.ResumeLayout(false);
             this.panelUsuario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureRound1)).EndInit();
             this.panelTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -705,7 +705,6 @@ namespace AqueaductoApp
             ((System.ComponentModel.ISupportInitialize)(this.pROPIETARIOSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pREDIOSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureRound1)).EndInit();
             this.ResumeLayout(false);
 
         }

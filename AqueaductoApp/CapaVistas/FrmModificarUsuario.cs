@@ -174,27 +174,25 @@ namespace AqueaductoApp.CapaVistas
                                         modificar.ModificarUsuario(this.txtCedula.Text,this.txtName.Text,this.txtLastName.Text,this.txtCorreo.Text,this.txtTelefono.Text,pass,photo,rol,estado,this.txtFile.Text,id);
 
 
+                                        //Recargar DataGrid
+                                        this.uSUARIOSTableAdapter.Fill(this.dataSet1.USUARIOS);
+
+
+                                        //Mensaje de Salida para que el usuario sepa que está modificado el Usuario 
+                                        MessageBox.Show("Usuario modificado", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        this.txtCedula.Text = "";
+                                        this.txtName.Text = "";
+                                        this.txtLastName.Text = "";
+                                        this.txtCorreo.Text = "";
+                                        this.txtTelefono.Text = "";
+                                        this.txtPassword.Text = "";
+                                        this.txtFile.Text = "";
+                                        this.pictureUser.Image = null;
+                                        this.labelID.Text = null;
+
                                     }
 
 
-
-                                    //Recargar DataGrid
-                                    CapaDatos.AcueductoDataSetTableAdapters.USUARIOSTableAdapter TU = new CapaDatos.AcueductoDataSetTableAdapters.USUARIOSTableAdapter();
-                                    CapaDatos.AcueductoDataSet.USUARIOSDataTable ta = TU.GetData();
-                                    GridUser.DataSource = ta;
-
-
-                                    //Mensaje de Salida para que el usuario sepa que está modificado el Usuario 
-                                    MessageBox.Show("Usuario modificado", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    this.txtCedula.Text = "";
-                                    this.txtName.Text = "";
-                                    this.txtLastName.Text = "";
-                                    this.txtCorreo.Text = "";
-                                    this.txtTelefono.Text = "";
-                                    this.txtPassword.Text = "";
-                                    this.txtFile.Text = "";
-                                    this.pictureUser.Image = null;
-                                    this.labelID.Text = null;
                                 }
                             }
                         }
@@ -330,11 +328,6 @@ namespace AqueaductoApp.CapaVistas
             }
         }
 
-        private void pictureUser_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void comboEstado_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
@@ -371,10 +364,7 @@ namespace AqueaductoApp.CapaVistas
 
         }
 
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void GridUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -445,6 +435,6 @@ namespace AqueaductoApp.CapaVistas
             }
 
         }
-        }
+    }
     
     }
