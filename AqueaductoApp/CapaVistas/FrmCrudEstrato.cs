@@ -93,5 +93,10 @@ namespace AqueaductoApp.CapaVistas
                 this.eSTRATOSTableAdapter.Fill(this.dataSet1.ESTRATOS);
             }
         }
+
+        private void comboEstrato_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }

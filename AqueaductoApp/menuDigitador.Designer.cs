@@ -197,7 +197,7 @@ namespace AqueaductoApp
             // pictureRound1
             // 
             this.pictureRound1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.pictureRound1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(183)))));
+            this.pictureRound1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
             this.pictureRound1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.pictureRound1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.pictureRound1.BorderSize = 2;

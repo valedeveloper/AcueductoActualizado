@@ -127,6 +127,7 @@ namespace AqueaductoApp.CapaVistas
                                         this.txtLastName.Text = "";
                                         this.txtCorreo.Text = "";
                                         this.txtTelefono.Text = "";
+                                        this.comboEstado.Text = "";
                                     }
                                     catch 
                                     {
@@ -162,6 +163,7 @@ namespace AqueaductoApp.CapaVistas
                 this.txtLastName.Text = "";
                 this.txtCorreo.Text = "";
                 this.txtTelefono.Text = "";
+                this.comboEstado.Text = "";
 
 
                 //Recargar DataGrid
@@ -249,6 +251,7 @@ namespace AqueaductoApp.CapaVistas
                 return;
 
             }
+
         }
 
         private void txtLastName_KeyPress(object sender, KeyPressEventArgs e)
@@ -269,6 +272,11 @@ namespace AqueaductoApp.CapaVistas
             // TODO: esta línea de código carga datos en la tabla 'dataSet1.PROPIETARIOS' Puede moverla o quitarla según sea necesario.
             this.pROPIETARIOSTableAdapter.Fill(this.dataSet1.PROPIETARIOS);
 
+        }
+
+        private void comboEstado_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

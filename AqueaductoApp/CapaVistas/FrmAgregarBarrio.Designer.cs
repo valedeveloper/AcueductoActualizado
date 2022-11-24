@@ -92,24 +92,24 @@ namespace AqueaductoApp.CapaVistas
             // 
             this.txtBarrio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
             this.txtBarrio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBarrio.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBarrio.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtBarrio.ForeColor = System.Drawing.Color.White;
             this.txtBarrio.Location = new System.Drawing.Point(414, 258);
             this.txtBarrio.Name = "txtBarrio";
-            this.txtBarrio.Size = new System.Drawing.Size(155, 20);
-            this.txtBarrio.TabIndex = 77;
+            this.txtBarrio.Size = new System.Drawing.Size(155, 16);
+            this.txtBarrio.TabIndex = 1;
             this.txtBarrio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBarrio_KeyPress);
             // 
             // txtPostal
             // 
             this.txtPostal.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtPostal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPostal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPostal.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtPostal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(138)))));
             this.txtPostal.Location = new System.Drawing.Point(414, 328);
             this.txtPostal.Name = "txtPostal";
-            this.txtPostal.Size = new System.Drawing.Size(155, 20);
-            this.txtPostal.TabIndex = 79;
+            this.txtPostal.Size = new System.Drawing.Size(155, 16);
+            this.txtPostal.TabIndex = 2;
             this.txtPostal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPostal_KeyPress);
             // 
             // btnAgregar

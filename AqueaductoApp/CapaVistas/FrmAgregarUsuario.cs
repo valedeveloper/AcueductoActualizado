@@ -88,6 +88,8 @@ namespace AqueaductoApp.CapaVistas
                 this.comboEstado.Items.Clear();
                 this.txtFile.Text = "";
                 this.pictureUser.Image = null;
+                this.comboEstado.Text = "";
+                this.combotxtRol.Text = "";
 
             }
         }
@@ -241,6 +243,8 @@ namespace AqueaductoApp.CapaVistas
                                             this.txtPassword.Text = "";
                                             this.txtFile.Text = "";
                                             this.pictureUser.Image = null;
+                                            this.comboEstado.Text = "";
+                                            this.combotxtRol.Text = "";
                                         }
                                      
                                      }
@@ -261,19 +265,32 @@ namespace AqueaductoApp.CapaVistas
 
         }
 
-        private void FrmAgregarUsuario_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+    
+    
 
         private void txtCorreo_TextChanged(object sender, EventArgs e)
         {
+            //abrir archivo 
+            using (OpenFileDialog dialog = new OpenFileDialog())
+            {
+                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    //Traer Dirección de la foto
+                    this.txtFile.Text = "";
+                    txtFile.Text = dialog.FileName;
+                    pictureUser.Image = Image.FromFile(this.txtFile.Text);
+                    FileStream stream = new FileStream(this.txtFile.Text, FileMode.Open, FileAccess.Read);
 
+                    /// Leer Archivo stream y convertilo en binario
+                    /// 
+                    BinaryReader read = new BinaryReader(stream);
+
+                    ///**** Guarda los binary en un archivo de bites
+                    ///
+                    photo = read.ReadBytes((int)stream.Length);
+                }
+
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -310,9 +327,6 @@ namespace AqueaductoApp.CapaVistas
 
         }
 
-        private void txtCorreo_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
+     
     }
 }

@@ -31,12 +31,12 @@ namespace AqueaductoApp.CapaVistas
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmagregarPredio));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.eSTRATOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new AqueaductoApp.CapaDatos.DataSet1();
             this.eSTRATOSPREDIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -77,6 +77,7 @@ namespace AqueaductoApp.CapaVistas
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.eSTRATOSBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.eSTRATOSBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eSTRATOSPREDIOSBindingSource)).BeginInit();
@@ -93,6 +94,7 @@ namespace AqueaductoApp.CapaVistas
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridPropietario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eSTRATOSBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // eSTRATOSBindingSource1
@@ -227,22 +229,22 @@ namespace AqueaductoApp.CapaVistas
             // 
             this.GridPropietario.AllowUserToAddRows = false;
             this.GridPropietario.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GridPropietario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GridPropietario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.GridPropietario.AutoGenerateColumns = false;
             this.GridPropietario.BackgroundColor = System.Drawing.Color.White;
             this.GridPropietario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GridPropietario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.GridPropietario.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.GridPropietario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridPropietario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridPropietario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.GridPropietario.ColumnHeadersHeight = 20;
             this.GridPropietario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.GridPropietario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -254,14 +256,14 @@ namespace AqueaductoApp.CapaVistas
             this.correoPropietarioDataGridViewTextBoxColumn,
             this.estadoPropietarioDataGridViewTextBoxColumn});
             this.GridPropietario.DataSource = this.pROPIETARIOSBindingSource;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GridPropietario.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GridPropietario.DefaultCellStyle = dataGridViewCellStyle12;
             this.GridPropietario.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.GridPropietario.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.GridPropietario.Location = new System.Drawing.Point(210, 40);
@@ -287,11 +289,11 @@ namespace AqueaductoApp.CapaVistas
             // cedulaPropietarioDataGridViewTextBoxColumn
             // 
             this.cedulaPropietarioDataGridViewTextBoxColumn.DataPropertyName = "Cedula_Propietario";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
-            this.cedulaPropietarioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
+            this.cedulaPropietarioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
             this.cedulaPropietarioDataGridViewTextBoxColumn.HeaderText = "Cédula ";
             this.cedulaPropietarioDataGridViewTextBoxColumn.Name = "cedulaPropietarioDataGridViewTextBoxColumn";
             this.cedulaPropietarioDataGridViewTextBoxColumn.ReadOnly = true;
@@ -300,11 +302,11 @@ namespace AqueaductoApp.CapaVistas
             // nombrePropietarioDataGridViewTextBoxColumn
             // 
             this.nombrePropietarioDataGridViewTextBoxColumn.DataPropertyName = "Nombre_Propietario";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
-            this.nombrePropietarioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
+            this.nombrePropietarioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
             this.nombrePropietarioDataGridViewTextBoxColumn.HeaderText = "Nombre";
             this.nombrePropietarioDataGridViewTextBoxColumn.Name = "nombrePropietarioDataGridViewTextBoxColumn";
             this.nombrePropietarioDataGridViewTextBoxColumn.ReadOnly = true;
@@ -312,11 +314,11 @@ namespace AqueaductoApp.CapaVistas
             // apellidoPropietarioDataGridViewTextBoxColumn
             // 
             this.apellidoPropietarioDataGridViewTextBoxColumn.DataPropertyName = "Apellido_Propietario";
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
-            this.apellidoPropietarioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
+            this.apellidoPropietarioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
             this.apellidoPropietarioDataGridViewTextBoxColumn.HeaderText = "Apellido";
             this.apellidoPropietarioDataGridViewTextBoxColumn.Name = "apellidoPropietarioDataGridViewTextBoxColumn";
             this.apellidoPropietarioDataGridViewTextBoxColumn.ReadOnly = true;
@@ -366,6 +368,7 @@ namespace AqueaductoApp.CapaVistas
             this.txtCatastro.Name = "txtCatastro";
             this.txtCatastro.Size = new System.Drawing.Size(187, 16);
             this.txtCatastro.TabIndex = 98;
+            this.txtCatastro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCatastro_KeyPress);
             // 
             // label8
             // 
@@ -383,7 +386,7 @@ namespace AqueaductoApp.CapaVistas
             this.comboBarrio.BackColor = System.Drawing.Color.WhiteSmoke;
             this.comboBarrio.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bARRIOSBindingSource1, "Id_Barrio", true));
             this.comboBarrio.DataSource = this.bARRIOSBindingSource2;
-            this.comboBarrio.DisplayMember = "Nombre_Barrio";
+            this.comboBarrio.DisplayMember = "Id_Barrio";
             this.comboBarrio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBarrio.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
             this.comboBarrio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(138)))));
@@ -393,12 +396,13 @@ namespace AqueaductoApp.CapaVistas
             this.comboBarrio.Size = new System.Drawing.Size(144, 24);
             this.comboBarrio.TabIndex = 96;
             this.comboBarrio.ValueMember = "Id_Barrio";
+            this.comboBarrio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBarrio_KeyPress_1);
             // 
             // comboEstrato
             // 
             this.comboEstrato.BackColor = System.Drawing.Color.WhiteSmoke;
             this.comboEstrato.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.eSTRATOSBindingSource1, "Id_Estrato", true));
-            this.comboEstrato.DataSource = this.eSTRATOSPREDIOSBindingSource;
+            this.comboEstrato.DataSource = this.eSTRATOSBindingSource2;
             this.comboEstrato.DisplayMember = "Id_Estrato";
             this.comboEstrato.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboEstrato.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
@@ -409,6 +413,8 @@ namespace AqueaductoApp.CapaVistas
             this.comboEstrato.Size = new System.Drawing.Size(144, 24);
             this.comboEstrato.TabIndex = 95;
             this.comboEstrato.ValueMember = "Id_Estrato";
+            this.comboEstrato.SelectedIndexChanged += new System.EventHandler(this.comboEstrato_SelectedIndexChanged);
+            this.comboEstrato.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboEstrato_KeyPress_1);
             // 
             // label7
             // 
@@ -435,6 +441,8 @@ namespace AqueaductoApp.CapaVistas
             this.comboEstado.Name = "comboEstado";
             this.comboEstado.Size = new System.Drawing.Size(91, 24);
             this.comboEstado.TabIndex = 92;
+            this.comboEstado.SelectedIndexChanged += new System.EventHandler(this.comboEstado_SelectedIndexChanged);
+            this.comboEstado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboEstado_KeyPress_1);
             // 
             // label6
             // 
@@ -469,6 +477,7 @@ namespace AqueaductoApp.CapaVistas
             this.txtCedula.ReadOnly = true;
             this.txtCedula.Size = new System.Drawing.Size(187, 16);
             this.txtCedula.TabIndex = 88;
+            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 
             // button2
             // 
@@ -499,6 +508,11 @@ namespace AqueaductoApp.CapaVistas
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // eSTRATOSBindingSource2
+            // 
+            this.eSTRATOSBindingSource2.DataMember = "ESTRATOS";
+            this.eSTRATOSBindingSource2.DataSource = this.dataSet1;
             // 
             // FrmagregarPredio
             // 
@@ -531,6 +545,7 @@ namespace AqueaductoApp.CapaVistas
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridPropietario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eSTRATOSBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -576,5 +591,6 @@ namespace AqueaductoApp.CapaVistas
         private System.Windows.Forms.DataGridViewTextBoxColumn correoPropietarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoPropietarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.BindingSource eSTRATOSBindingSource2;
     }
 }

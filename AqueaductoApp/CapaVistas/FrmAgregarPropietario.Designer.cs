@@ -33,6 +33,7 @@ namespace AqueaductoApp.CapaVistas
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.comboEstado = new System.Windows.Forms.ComboBox();
             this.txtCedula = new System.Windows.Forms.TextBox();
@@ -48,7 +49,6 @@ namespace AqueaductoApp.CapaVistas
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -99,6 +99,16 @@ namespace AqueaductoApp.CapaVistas
             this.panel2.TabIndex = 92;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(97, 137);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(234, 224);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 109;
+            this.pictureBox1.TabStop = false;
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -126,7 +136,9 @@ namespace AqueaductoApp.CapaVistas
             this.comboEstado.Margin = new System.Windows.Forms.Padding(5);
             this.comboEstado.Name = "comboEstado";
             this.comboEstado.Size = new System.Drawing.Size(114, 24);
-            this.comboEstado.TabIndex = 107;
+            this.comboEstado.TabIndex = 6;
+            this.comboEstado.SelectedIndexChanged += new System.EventHandler(this.comboEstado_SelectedIndexChanged);
+            this.comboEstado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboEstado_KeyPress_1);
             // 
             // txtCedula
             // 
@@ -138,7 +150,8 @@ namespace AqueaductoApp.CapaVistas
             this.txtCedula.Margin = new System.Windows.Forms.Padding(5);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(193, 16);
-            this.txtCedula.TabIndex = 104;
+            this.txtCedula.TabIndex = 1;
+            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 
             // label13
             // 
@@ -163,7 +176,7 @@ namespace AqueaductoApp.CapaVistas
             this.button2.Location = new System.Drawing.Point(434, 497);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(139, 33);
-            this.button2.TabIndex = 97;
+            this.button2.TabIndex = 8;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
@@ -178,7 +191,7 @@ namespace AqueaductoApp.CapaVistas
             this.btnAgregar.Location = new System.Drawing.Point(218, 497);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(139, 33);
-            this.btnAgregar.TabIndex = 96;
+            this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -257,7 +270,7 @@ namespace AqueaductoApp.CapaVistas
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(5);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(193, 16);
-            this.txtCorreo.TabIndex = 94;
+            this.txtCorreo.TabIndex = 5;
             // 
             // txtTelefono
             // 
@@ -269,7 +282,8 @@ namespace AqueaductoApp.CapaVistas
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(5);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(193, 16);
-            this.txtTelefono.TabIndex = 93;
+            this.txtTelefono.TabIndex = 4;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtLastName
             // 
@@ -281,7 +295,8 @@ namespace AqueaductoApp.CapaVistas
             this.txtLastName.Margin = new System.Windows.Forms.Padding(5);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(193, 16);
-            this.txtLastName.TabIndex = 92;
+            this.txtLastName.TabIndex = 3;
+            this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtName
             // 
@@ -293,17 +308,8 @@ namespace AqueaductoApp.CapaVistas
             this.txtName.Margin = new System.Windows.Forms.Padding(5);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(193, 16);
-            this.txtName.TabIndex = 91;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(97, 137);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(234, 224);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 109;
-            this.pictureBox1.TabStop = false;
+            this.txtName.TabIndex = 2;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress_1);
             // 
             // FrmAgregarPropietario
             // 

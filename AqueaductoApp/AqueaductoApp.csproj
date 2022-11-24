@@ -114,12 +114,6 @@
     <Compile Include="CapaVistas\FrmAgregarBarrio.Designer.cs">
       <DependentUpon>FrmAgregarBarrio.cs</DependentUpon>
     </Compile>
-    <Compile Include="CapaVistas\FrmAgregarEstrato.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CapaVistas\FrmAgregarEstrato.Designer.cs">
-      <DependentUpon>FrmAgregarEstrato.cs</DependentUpon>
-    </Compile>
     <Compile Include="CapaVistas\FrmAgregarFactura.cs">
       <SubType>Form</SubType>
     </Compile>

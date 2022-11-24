@@ -127,14 +127,6 @@ namespace AqueaductoApp.CapaVistas
             }
         }
 
-        private void comboBarrio_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
@@ -193,7 +185,7 @@ namespace AqueaductoApp.CapaVistas
 
         private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = true;
+           
         }
 
         private void txtCatastro_KeyPress(object sender, KeyPressEventArgs e)
@@ -254,6 +246,23 @@ namespace AqueaductoApp.CapaVistas
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+
+        }
+
+        private void comboBarrio_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void comboEstrato_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+
+        }
+
+        private void comboEstado_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
 
         }
     }

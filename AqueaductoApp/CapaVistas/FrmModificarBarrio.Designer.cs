@@ -32,8 +32,8 @@ namespace AqueaductoApp.CapaVistas
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label label4;
             System.Windows.Forms.Label label3;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModificarBarrio));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -108,12 +108,12 @@ namespace AqueaductoApp.CapaVistas
             // 
             this.txtBarrio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
             this.txtBarrio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBarrio.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBarrio.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtBarrio.ForeColor = System.Drawing.Color.White;
             this.txtBarrio.Location = new System.Drawing.Point(478, 363);
             this.txtBarrio.Name = "txtBarrio";
-            this.txtBarrio.Size = new System.Drawing.Size(155, 20);
-            this.txtBarrio.TabIndex = 82;
+            this.txtBarrio.Size = new System.Drawing.Size(155, 16);
+            this.txtBarrio.TabIndex = 1;
             this.txtBarrio.TextChanged += new System.EventHandler(this.txtBarrio_TextChanged);
             this.txtBarrio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBarrio_KeyPress);
             // 
@@ -121,12 +121,12 @@ namespace AqueaductoApp.CapaVistas
             // 
             this.txtPostal.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtPostal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPostal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPostal.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtPostal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(68)))), ((int)(((byte)(138)))));
             this.txtPostal.Location = new System.Drawing.Point(478, 433);
             this.txtPostal.Name = "txtPostal";
-            this.txtPostal.Size = new System.Drawing.Size(155, 20);
-            this.txtPostal.TabIndex = 84;
+            this.txtPostal.Size = new System.Drawing.Size(155, 16);
+            this.txtPostal.TabIndex = 2;
             this.txtPostal.TextChanged += new System.EventHandler(this.txtPostal_TextChanged);
             this.txtPostal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPostal_KeyPress);
             // 
@@ -140,7 +140,7 @@ namespace AqueaductoApp.CapaVistas
             this.button2.Location = new System.Drawing.Point(424, 591);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(139, 33);
-            this.button2.TabIndex = 86;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -155,7 +155,7 @@ namespace AqueaductoApp.CapaVistas
             this.btnAgregar.Location = new System.Drawing.Point(249, 591);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(139, 33);
-            this.btnAgregar.TabIndex = 87;
+            this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Modificar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -168,28 +168,28 @@ namespace AqueaductoApp.CapaVistas
             this.GridBarrio.BackgroundColor = System.Drawing.Color.White;
             this.GridBarrio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GridBarrio.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridBarrio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridBarrio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.GridBarrio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridBarrio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idBarrioDataGridViewTextBoxColumn,
             this.nombreBarrioDataGridViewTextBoxColumn,
             this.codigoPostalDataGridViewTextBoxColumn});
             this.GridBarrio.DataSource = this.bARRIOSBindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GridBarrio.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GridBarrio.DefaultCellStyle = dataGridViewCellStyle2;
             this.GridBarrio.GridColor = System.Drawing.Color.White;
             this.GridBarrio.Location = new System.Drawing.Point(171, 136);
             this.GridBarrio.Name = "GridBarrio";

@@ -125,6 +125,7 @@ namespace AqueaductoApp.CapaVistas
             this.button2.TabIndex = 95;
             this.button2.Text = "Abrir";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.txtCorreo_TextChanged);
             // 
             // txtFile
             // 
@@ -165,6 +166,7 @@ namespace AqueaductoApp.CapaVistas
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(193, 16);
             this.txtCedula.TabIndex = 74;
+            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // label3
             // 
@@ -228,7 +230,7 @@ namespace AqueaductoApp.CapaVistas
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(233, 505);
+            this.btnAgregar.Location = new System.Drawing.Point(222, 505);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(5);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(139, 33);
@@ -325,7 +327,6 @@ namespace AqueaductoApp.CapaVistas
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(187, 16);
             this.txtCorreo.TabIndex = 79;
-            this.txtCorreo.TextChanged += new System.EventHandler(this.txtCorreo_TextChanged_1);
             // 
             // label2
             // 
@@ -405,7 +406,6 @@ namespace AqueaductoApp.CapaVistas
             this.Padding = new System.Windows.Forms.Padding(6);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Usuario";
-            this.Load += new System.EventHandler(this.FrmAgregarUsuario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

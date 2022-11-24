@@ -156,28 +156,7 @@ namespace AqueaductoApp.CapaVistas
 
         private void txtCatastro_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsDigit(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                if (char.IsControl(e.KeyChar))
-                {
-                    e.Handled = false;
-                }
-                else
-                {
-                    if (char.IsPunctuation(e.KeyChar))
-                    {
-                        e.Handled = false;
-                    }
-                    else
-                    {
-                        e.Handled = true;
-                    }
-                }
-            }
+           e.Handled=true;
         }
 
         private void comboEstrato_KeyPress(object sender, KeyPressEventArgs e)
@@ -228,7 +207,23 @@ namespace AqueaductoApp.CapaVistas
             estado = int.Parse(GridPredio.CurrentRow.Cells[5].Value.ToString());
 
 
-                
+            string estadoPredio = GridPredio.CurrentRow.Cells[5].Value.ToString();
+            //Poner el estado en el comboBox
+            if (estadoPredio == "1")
+            {
+                estadoStri = "Activo";
+                int index = comboEstado.FindString(estadoStri);
+                comboEstado.SelectedIndex = index;
+            }
+            else
+            {
+                estadoStri = "Inactivo";
+                int index = comboEstado.FindString(estadoStri);
+                comboEstado.SelectedIndex = index;
+            }
+
+
+
 
 
         }

@@ -197,6 +197,7 @@ namespace AqueaductoApp.CapaVistas
                                     this.txtLastName.Text = "";
                                     this.txtCorreo.Text = "";
                                     this.txtTelefono.Text = "";
+                                    this.comboEstado.Text = "";
                                 }
                             }
                         }
@@ -226,6 +227,8 @@ namespace AqueaductoApp.CapaVistas
                 this.txtLastName.Text = "";
                 this.txtCorreo.Text = "";
                 this.txtTelefono.Text = "";
+                this.comboEstado.Text = "";
+
             }
         }
 
@@ -253,30 +256,7 @@ namespace AqueaductoApp.CapaVistas
 
         private void txtTelefono_KeyPress_1(object sender, KeyPressEventArgs e)
         {
-            if (char.IsDigit(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                if (char.IsControl(e.KeyChar))
-                {
-                    e.Handled = false;
-                }
-                else
-                {
-                    if (char.IsPunctuation(e.KeyChar))
-                    {
-                        e.Handled = false;
-                    }
-                    else
-                    {
-                        e.Handled = true;
-                    }
-                }
 
-
-            }
         }
 
         private void comboEstado_SelectedIndexChanged(object sender, EventArgs e)
@@ -335,6 +315,11 @@ namespace AqueaductoApp.CapaVistas
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void comboEstado_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 } 

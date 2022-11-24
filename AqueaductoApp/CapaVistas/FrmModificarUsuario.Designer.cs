@@ -164,6 +164,7 @@ namespace AqueaductoApp.CapaVistas
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(789, 689);
             this.panel2.TabIndex = 76;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // txtTelefono
             // 
@@ -187,6 +188,7 @@ namespace AqueaductoApp.CapaVistas
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(192, 16);
             this.txtCedula.TabIndex = 107;
+            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textCedula_KeyPress);
             // 
             // label2
             // 
@@ -224,6 +226,7 @@ namespace AqueaductoApp.CapaVistas
             this.comboEstado.Name = "comboEstado";
             this.comboEstado.Size = new System.Drawing.Size(123, 24);
             this.comboEstado.TabIndex = 99;
+            this.comboEstado.SelectedIndexChanged += new System.EventHandler(this.comboEstado_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -329,6 +332,7 @@ namespace AqueaductoApp.CapaVistas
             this.comboRol.Name = "comboRol";
             this.comboRol.Size = new System.Drawing.Size(126, 24);
             this.comboRol.TabIndex = 96;
+            this.comboRol.SelectedIndexChanged += new System.EventHandler(this.combotxtRol_SelectedIndexChanged);
             // 
             // txtLastName
             // 
@@ -376,6 +380,7 @@ namespace AqueaductoApp.CapaVistas
             this.button1.TabIndex = 87;
             this.button1.Text = "Abrir";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // txtFile
             // 

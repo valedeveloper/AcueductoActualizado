@@ -23,12 +23,9 @@ namespace AqueaductoApp.CapaVistas
         string direccionImg;
         public int posicion;
         byte[] photo;
-        byte[] photo2;
         string pass;
-        string password;
         string cedula;
         string estadoStri;
-        string estadoB;
 
 
         public FrmModificarUsuario()
@@ -111,6 +108,8 @@ namespace AqueaductoApp.CapaVistas
                 this.txtFile.Text = "";
                 this.pictureUser.Image = null;
                 this.labelID.Text = null;
+                this.comboEstado.Text = "";
+                this.comboRol.Text = "";
 
                 //RecargarDatGrid
                 CapaDatos.DataSet1TableAdapters.USUARIOSTableAdapter tU = new CapaDatos.DataSet1TableAdapters.USUARIOSTableAdapter();
@@ -188,6 +187,8 @@ namespace AqueaductoApp.CapaVistas
                                         this.txtFile.Text = "";
                                         this.pictureUser.Image = null;
                                         this.labelID.Text = null;
+                                        this.comboEstado.Text = "";
+                                        this.comboRol.Text = "";
 
                                     }
 
@@ -390,12 +391,11 @@ namespace AqueaductoApp.CapaVistas
 
             direccionImg = GridUser.CurrentRow.Cells[10].Value.ToString();
             this.txtFile.Text = direccionImg;
-
-
-            int rolBase = int.Parse(GridUser.CurrentRow.Cells[8].Value.ToString());
+            rol = int.Parse(GridUser.CurrentRow.Cells[8].Value.ToString());
             string rolString;
+            estado = int.Parse(GridUser.CurrentRow.Cells[9].Value.ToString()); ;
 
-            if (rolBase == 1)
+            if (rol == 1)
             {
                 rolString = "Administrador";
                 int index = comboRol.FindString(rolString);
@@ -403,7 +403,7 @@ namespace AqueaductoApp.CapaVistas
             }
             else
             {
-                if (rolBase == 2)
+                if (rol == 2)
                 {
                     rolString = "Digitador";
                     int index = comboRol.FindString(rolString);
@@ -418,7 +418,7 @@ namespace AqueaductoApp.CapaVistas
 
             }
 
-            string estadoUser= GridUser.CurrentRow.Cells[9].Value.ToString(); ;
+            string estadoUser = GridUser.CurrentRow.Cells[9].Value.ToString(); ;
             //Poner el estado en el comboBox
             if (estadoUser == "1")
             {
@@ -432,6 +432,39 @@ namespace AqueaductoApp.CapaVistas
                 int index = comboEstado.FindString(estadoStri);
                 comboEstado.SelectedIndex = index;
             }
+        
+            //Poner el estado en el comboBox
+         
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            //abrir archivo 
+            using (OpenFileDialog dialog = new OpenFileDialog())
+            {
+                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    //Traer Dirección de la foto
+                    this.txtFile.Text = "";
+                    txtFile.Text = dialog.FileName;
+                    pictureUser.Image = Image.FromFile(this.txtFile.Text);
+                    FileStream stream = new FileStream(this.txtFile.Text, FileMode.Open, FileAccess.Read);
+
+                    /// Leer Archivo stream y convertilo en binario
+                    /// 
+                    BinaryReader read = new BinaryReader(stream);
+
+                    ///**** Guarda los binary en un archivo de bites
+                    ///
+                    photo = read.ReadBytes((int)stream.Length);
+                }
+
+            }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

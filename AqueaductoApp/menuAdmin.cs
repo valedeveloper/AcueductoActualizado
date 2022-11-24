@@ -153,6 +153,7 @@ namespace AqueaductoApp
 
         private void btnModificarPredio_Click(object sender, EventArgs e)
         {
+            mostrarPanel(new FrmModificarPredio());
             hideSubmenu();
         }
 
@@ -273,10 +274,6 @@ namespace AqueaductoApp
 
         
 
-
-        private void btnReportes_Click_1(object sender, EventArgs e)
-        {
-        }
 
         private void btnBarrio_Click(object sender, EventArgs e)
         {
@@ -435,6 +432,18 @@ namespace AqueaductoApp
         private void iconButton1_Click(object sender, EventArgs e)
         {
             mostrarPanel(new FrmModificarBarrio());
+            hideSubmenu();
+        }
+
+        private void btnEstrato_Click_1(object sender, EventArgs e)
+        {
+            showSubMenu(panelSubmenuEstrato);
+
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            mostrarPanel(new FrmCrudEstrato());
             hideSubmenu();
         }
     }
