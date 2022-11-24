@@ -62,10 +62,14 @@ namespace AqueaductoApp.CapaVistas
             this.mesFacturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.consumoMetrosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fACTURASBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtConsecutivo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fACTURASBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridImprimir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fACTURASBindingSource1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -73,7 +77,7 @@ namespace AqueaductoApp.CapaVistas
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
-            this.label2.Location = new System.Drawing.Point(68, 108);
+            this.label2.Location = new System.Drawing.Point(265, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(257, 29);
             this.label2.TabIndex = 3;
@@ -83,7 +87,7 @@ namespace AqueaductoApp.CapaVistas
             // 
             this.iconButton1.BackColor = System.Drawing.Color.DeepPink;
             this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Print;
@@ -91,7 +95,7 @@ namespace AqueaductoApp.CapaVistas
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconButton1.IconSize = 40;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(162, 477);
+            this.iconButton1.Location = new System.Drawing.Point(270, 493);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Padding = new System.Windows.Forms.Padding(3);
             this.iconButton1.Size = new System.Drawing.Size(213, 47);
@@ -124,7 +128,7 @@ namespace AqueaductoApp.CapaVistas
             this.labelConsecutivo.AutoSize = true;
             this.labelConsecutivo.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelConsecutivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
-            this.labelConsecutivo.Location = new System.Drawing.Point(193, 217);
+            this.labelConsecutivo.Location = new System.Drawing.Point(285, 246);
             this.labelConsecutivo.Name = "labelConsecutivo";
             this.labelConsecutivo.Size = new System.Drawing.Size(0, 16);
             this.labelConsecutivo.TabIndex = 86;
@@ -135,8 +139,8 @@ namespace AqueaductoApp.CapaVistas
             // 
             this.label.AutoSize = true;
             this.label.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
-            this.label.Location = new System.Drawing.Point(70, 217);
+            this.label.ForeColor = System.Drawing.Color.DimGray;
+            this.label.Location = new System.Drawing.Point(159, 246);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(103, 16);
             this.label.TabIndex = 85;
@@ -208,14 +212,14 @@ namespace AqueaductoApp.CapaVistas
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.GridImprimir.DefaultCellStyle = dataGridViewCellStyle7;
             this.GridImprimir.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.GridImprimir.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.GridImprimir.Location = new System.Drawing.Point(59, 282);
+            this.GridImprimir.Location = new System.Drawing.Point(162, 307);
             this.GridImprimir.Name = "GridImprimir";
             this.GridImprimir.ReadOnly = true;
             this.GridImprimir.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -361,17 +365,51 @@ namespace AqueaductoApp.CapaVistas
             this.fACTURASBindingSource1.DataMember = "FACTURAS";
             this.fACTURASBindingSource1.DataSource = this.dataSet1;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(795, 99);
+            this.panel1.TabIndex = 88;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(159, 206);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(193, 18);
+            this.label1.TabIndex = 89;
+            this.label1.Text = "Facturas Pendientes:";
+            // 
+            // txtConsecutivo
+            // 
+            this.txtConsecutivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
+            this.txtConsecutivo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConsecutivo.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConsecutivo.ForeColor = System.Drawing.Color.White;
+            this.txtConsecutivo.Location = new System.Drawing.Point(270, 246);
+            this.txtConsecutivo.Name = "txtConsecutivo";
+            this.txtConsecutivo.Size = new System.Drawing.Size(155, 16);
+            this.txtConsecutivo.TabIndex = 90;
+            this.txtConsecutivo.TextChanged += new System.EventHandler(this.txtConsecutivo_TextChanged);
+            // 
             // FrmImprimirFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(560, 647);
+            this.ClientSize = new System.Drawing.Size(795, 745);
+            this.Controls.Add(this.txtConsecutivo);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.GridImprimir);
             this.Controls.Add(this.labelConsecutivo);
             this.Controls.Add(this.label);
             this.Controls.Add(this.iconButton1);
-            this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(195, 43);
             this.Name = "FrmImprimirFactura";
@@ -381,6 +419,8 @@ namespace AqueaductoApp.CapaVistas
             ((System.ComponentModel.ISupportInitialize)(this.fACTURASBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridImprimir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fACTURASBindingSource1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,5 +454,8 @@ namespace AqueaductoApp.CapaVistas
         private System.Windows.Forms.DataGridViewImageColumn codigoQrDataGridViewImageColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mesFacturaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn consumoMetrosDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtConsecutivo;
     }
 }

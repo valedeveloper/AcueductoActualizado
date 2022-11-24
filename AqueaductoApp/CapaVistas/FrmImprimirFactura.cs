@@ -25,7 +25,7 @@ namespace AqueaductoApp.CapaVistas
         private void iconButton1_Click(object sender, EventArgs e)
         {
             
-            if(this.labelConsecutivo.Text=="")
+            if(this.txtConsecutivo.Text=="")
             {
                 MessageBox.Show("Ingrese el consecutivo de la Factura");
             }
@@ -55,8 +55,7 @@ namespace AqueaductoApp.CapaVistas
                 frmFactura.ShowDialog();
                 frmFactura.Close();
 
-                this.labelConsecutivo.Text = "";
-
+                this.txtConsecutivo.Text = "";
 
                 //Actualizo el datagrid
 
@@ -111,13 +110,20 @@ namespace AqueaductoApp.CapaVistas
         {
             int posicion = GridImprimir.CurrentRow.Index;
             consecutivo = GridImprimir.CurrentRow.Cells[0].Value.ToString();
-            this.labelConsecutivo.Text = consecutivo;
-            this.labelConsecutivo.Visible = true;
+            this.txtConsecutivo.Text = consecutivo;
         }
 
         private void labelConsecutivo_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtConsecutivo_TextChanged(object sender, EventArgs e)
+        {
+            if(this.txtConsecutivo.Text=="")
+            {
+                MessageBox.Show("Escoja de la tabla el consecutivo para crear la Factura","Notificaciòn");
+            }
         }
     }
 }

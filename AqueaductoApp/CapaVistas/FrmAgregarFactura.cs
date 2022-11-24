@@ -304,10 +304,9 @@ namespace AqueaductoApp.CapaVistas
         private void txtCatastro_TextChanged(object sender, EventArgs e)
         {
 
-
             CapaDatos.DataSet1TableAdapters.CONSUMOSTableAdapter consumos = new CapaDatos.DataSet1TableAdapters.CONSUMOSTableAdapter();
             int existenciaDatos = (int)consumos.validarDatosConsumo(this.txtCatastro.Text);
-            if(this.txtCatastro.Text=="")
+            if (this.txtCatastro.Text == "")
             {
 
             }
@@ -331,8 +330,7 @@ namespace AqueaductoApp.CapaVistas
                 }
 
             }
-            
-            
+
 
         }
 

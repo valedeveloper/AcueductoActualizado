@@ -75,7 +75,7 @@ namespace AqueaductoApp
             this.panelItem.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelItem.Location = new System.Drawing.Point(0, 0);
             this.panelItem.Name = "panelItem";
-            this.panelItem.Size = new System.Drawing.Size(195, 690);
+            this.panelItem.Size = new System.Drawing.Size(195, 788);
             this.panelItem.TabIndex = 1;
             // 
             // panelSubmenuReportes
@@ -301,14 +301,14 @@ namespace AqueaductoApp
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(195, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(580, 43);
+            this.panelTop.Size = new System.Drawing.Size(815, 43);
             this.panelTop.TabIndex = 2;
             // 
             // pictureMinimize
             // 
             this.pictureMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureMinimize.Image = ((System.Drawing.Image)(resources.GetObject("pictureMinimize.Image")));
-            this.pictureMinimize.Location = new System.Drawing.Point(502, 9);
+            this.pictureMinimize.Location = new System.Drawing.Point(737, 9);
             this.pictureMinimize.Name = "pictureMinimize";
             this.pictureMinimize.Size = new System.Drawing.Size(30, 28);
             this.pictureMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -320,7 +320,7 @@ namespace AqueaductoApp
             // 
             this.pictureClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureClose.Image = ((System.Drawing.Image)(resources.GetObject("pictureClose.Image")));
-            this.pictureClose.Location = new System.Drawing.Point(538, 7);
+            this.pictureClose.Location = new System.Drawing.Point(773, 7);
             this.pictureClose.Name = "pictureClose";
             this.pictureClose.Size = new System.Drawing.Size(30, 30);
             this.pictureClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -333,7 +333,7 @@ namespace AqueaductoApp
             this.panelDerecho.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDerecho.Location = new System.Drawing.Point(195, 43);
             this.panelDerecho.Name = "panelDerecho";
-            this.panelDerecho.Size = new System.Drawing.Size(580, 647);
+            this.panelDerecho.Size = new System.Drawing.Size(815, 745);
             this.panelDerecho.TabIndex = 3;
             // 
             // fACTURASBindingSource
@@ -366,15 +366,14 @@ namespace AqueaductoApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 690);
+            this.ClientSize = new System.Drawing.Size(1010, 788);
             this.Controls.Add(this.panelDerecho);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelItem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "menuFacturador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Facturador";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Text = "i8";
             this.panelItem.ResumeLayout(false);
             this.panelSubmenuReportes.ResumeLayout(false);
             this.panelSubmenuFactura.ResumeLayout(false);

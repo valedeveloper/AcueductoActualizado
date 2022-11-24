@@ -33,14 +33,14 @@ namespace AqueaductoApp.CapaVistas
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.labelFactura = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAgregarFactura));
             this.txtCatastro = new System.Windows.Forms.TextBox();
             this.labelIdCatratral = new System.Windows.Forms.Label();
             this.btnAgregarFact = new FontAwesome.Sharp.IconButton();
@@ -48,13 +48,24 @@ namespace AqueaductoApp.CapaVistas
             this.txtMetros = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.GridPredio = new System.Windows.Forms.DataGridView();
+            this.idPredioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroCatastroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cedulaPropietarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id_Estrato = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.eSTRATOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new AqueaductoApp.CapaDatos.DataSet1();
+            this.Id_Barrio = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.bARRIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.estadoPredioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pREDIOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pREDIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pREDIOSTableAdapter = new AqueaductoApp.CapaDatos.DataSet1TableAdapters.PREDIOSTableAdapter();
             this.GridConsumo = new System.Windows.Forms.DataGridView();
+            this.idConsumoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroCatastroDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaConsumoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mesConsumoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metrosCubicosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cONSUMOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cONSUMOSTableAdapter = new AqueaductoApp.CapaDatos.DataSet1TableAdapters.CONSUMOSTableAdapter();
             this.totalFactura = new System.Windows.Forms.TextBox();
@@ -62,17 +73,9 @@ namespace AqueaductoApp.CapaVistas
             this.labelConsecutivo = new System.Windows.Forms.Label();
             this.eSTRATOSTableAdapter = new AqueaductoApp.CapaDatos.DataSet1TableAdapters.ESTRATOSTableAdapter();
             this.bARRIOSTableAdapter = new AqueaductoApp.CapaDatos.DataSet1TableAdapters.BARRIOSTableAdapter();
-            this.idPredioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeroCatastroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cedulaPropietarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id_Estrato = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Id_Barrio = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.estadoPredioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idConsumoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeroCatastroDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaConsumoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mesConsumoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.metrosCubicosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridPredio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eSTRATOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -81,27 +84,19 @@ namespace AqueaductoApp.CapaVistas
             ((System.ComponentModel.ISupportInitialize)(this.pREDIOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridConsumo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cONSUMOSBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // labelFactura
-            // 
-            this.labelFactura.AutoSize = true;
-            this.labelFactura.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFactura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
-            this.labelFactura.Location = new System.Drawing.Point(27, 73);
-            this.labelFactura.Name = "labelFactura";
-            this.labelFactura.Size = new System.Drawing.Size(246, 29);
-            this.labelFactura.TabIndex = 22;
-            this.labelFactura.Text = "Agregar Facturas";
             // 
             // txtCatastro
             // 
-            this.txtCatastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(191)))), ((int)(((byte)(227)))));
+            this.txtCatastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
+            this.txtCatastro.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCatastro.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtCatastro.ForeColor = System.Drawing.Color.White;
-            this.txtCatastro.Location = new System.Drawing.Point(300, 220);
+            this.txtCatastro.Location = new System.Drawing.Point(439, 246);
             this.txtCatastro.Name = "txtCatastro";
-            this.txtCatastro.Size = new System.Drawing.Size(104, 23);
+            this.txtCatastro.Size = new System.Drawing.Size(192, 16);
             this.txtCatastro.TabIndex = 64;
             this.txtCatastro.TextChanged += new System.EventHandler(this.txtCatastro_TextChanged);
             this.txtCatastro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCatastro_KeyPress);
@@ -110,8 +105,8 @@ namespace AqueaductoApp.CapaVistas
             // 
             this.labelIdCatratral.AutoSize = true;
             this.labelIdCatratral.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIdCatratral.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
-            this.labelIdCatratral.Location = new System.Drawing.Point(135, 227);
+            this.labelIdCatratral.ForeColor = System.Drawing.Color.DimGray;
+            this.labelIdCatratral.Location = new System.Drawing.Point(436, 215);
             this.labelIdCatratral.Name = "labelIdCatratral";
             this.labelIdCatratral.Size = new System.Drawing.Size(159, 16);
             this.labelIdCatratral.TabIndex = 63;
@@ -128,9 +123,9 @@ namespace AqueaductoApp.CapaVistas
             this.btnAgregarFact.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAgregarFact.IconColor = System.Drawing.Color.Black;
             this.btnAgregarFact.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAgregarFact.Location = new System.Drawing.Point(316, 527);
+            this.btnAgregarFact.Location = new System.Drawing.Point(439, 590);
             this.btnAgregarFact.Name = "btnAgregarFact";
-            this.btnAgregarFact.Size = new System.Drawing.Size(139, 33);
+            this.btnAgregarFact.Size = new System.Drawing.Size(171, 37);
             this.btnAgregarFact.TabIndex = 72;
             this.btnAgregarFact.Text = "Agregar Factura";
             this.btnAgregarFact.UseVisualStyleBackColor = false;
@@ -147,9 +142,9 @@ namespace AqueaductoApp.CapaVistas
             this.btnCalcularFac.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnCalcularFac.IconColor = System.Drawing.Color.Black;
             this.btnCalcularFac.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCalcularFac.Location = new System.Drawing.Point(104, 527);
+            this.btnCalcularFac.Location = new System.Drawing.Point(162, 590);
             this.btnCalcularFac.Name = "btnCalcularFac";
-            this.btnCalcularFac.Size = new System.Drawing.Size(139, 33);
+            this.btnCalcularFac.Size = new System.Drawing.Size(171, 37);
             this.btnCalcularFac.TabIndex = 76;
             this.btnCalcularFac.Text = "Calcular Factura";
             this.btnCalcularFac.UseVisualStyleBackColor = false;
@@ -157,13 +152,14 @@ namespace AqueaductoApp.CapaVistas
             // 
             // txtMetros
             // 
-            this.txtMetros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(191)))), ((int)(((byte)(227)))));
+            this.txtMetros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
+            this.txtMetros.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMetros.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtMetros.ForeColor = System.Drawing.Color.White;
-            this.txtMetros.Location = new System.Drawing.Point(300, 394);
+            this.txtMetros.Location = new System.Drawing.Point(439, 416);
             this.txtMetros.Name = "txtMetros";
             this.txtMetros.ReadOnly = true;
-            this.txtMetros.Size = new System.Drawing.Size(85, 23);
+            this.txtMetros.Size = new System.Drawing.Size(192, 16);
             this.txtMetros.TabIndex = 79;
             this.txtMetros.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMetros_KeyPress);
             // 
@@ -171,8 +167,8 @@ namespace AqueaductoApp.CapaVistas
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
-            this.label6.Location = new System.Drawing.Point(145, 397);
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.Location = new System.Drawing.Point(436, 384);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(140, 16);
             this.label6.TabIndex = 81;
@@ -192,7 +188,7 @@ namespace AqueaductoApp.CapaVistas
             this.GridPredio.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -218,7 +214,7 @@ namespace AqueaductoApp.CapaVistas
             this.GridPredio.DefaultCellStyle = dataGridViewCellStyle4;
             this.GridPredio.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.GridPredio.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.GridPredio.Location = new System.Drawing.Point(118, 125);
+            this.GridPredio.Location = new System.Drawing.Point(439, 115);
             this.GridPredio.Name = "GridPredio";
             this.GridPredio.ReadOnly = true;
             this.GridPredio.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -226,141 +222,9 @@ namespace AqueaductoApp.CapaVistas
             this.GridPredio.RowHeadersWidth = 42;
             this.GridPredio.RowTemplate.Height = 25;
             this.GridPredio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.GridPredio.Size = new System.Drawing.Size(297, 82);
+            this.GridPredio.Size = new System.Drawing.Size(219, 82);
             this.GridPredio.TabIndex = 89;
             this.GridPredio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // eSTRATOSBindingSource
-            // 
-            this.eSTRATOSBindingSource.DataMember = "ESTRATOS";
-            this.eSTRATOSBindingSource.DataSource = this.dataSet1;
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bARRIOSBindingSource
-            // 
-            this.bARRIOSBindingSource.DataMember = "BARRIOS";
-            this.bARRIOSBindingSource.DataSource = this.dataSet1;
-            // 
-            // pREDIOSBindingSource1
-            // 
-            this.pREDIOSBindingSource1.DataMember = "PREDIOS";
-            this.pREDIOSBindingSource1.DataSource = this.dataSet1;
-            // 
-            // pREDIOSBindingSource
-            // 
-            this.pREDIOSBindingSource.DataMember = "PREDIOS";
-            this.pREDIOSBindingSource.DataSource = this.dataSet1;
-            // 
-            // pREDIOSTableAdapter
-            // 
-            this.pREDIOSTableAdapter.ClearBeforeFill = true;
-            // 
-            // GridConsumo
-            // 
-            this.GridConsumo.AllowUserToAddRows = false;
-            this.GridConsumo.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GridConsumo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.GridConsumo.AutoGenerateColumns = false;
-            this.GridConsumo.BackgroundColor = System.Drawing.Color.White;
-            this.GridConsumo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.GridConsumo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.GridConsumo.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.GridConsumo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridConsumo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.GridConsumo.ColumnHeadersHeight = 20;
-            this.GridConsumo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.GridConsumo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idConsumoDataGridViewTextBoxColumn,
-            this.numeroCatastroDataGridViewTextBoxColumn1,
-            this.fechaConsumoDataGridViewTextBoxColumn,
-            this.mesConsumoDataGridViewTextBoxColumn,
-            this.metrosCubicosDataGridViewTextBoxColumn});
-            this.GridConsumo.DataSource = this.cONSUMOSBindingSource;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GridConsumo.DefaultCellStyle = dataGridViewCellStyle10;
-            this.GridConsumo.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.GridConsumo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.GridConsumo.Location = new System.Drawing.Point(138, 292);
-            this.GridConsumo.Name = "GridConsumo";
-            this.GridConsumo.ReadOnly = true;
-            this.GridConsumo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.GridConsumo.RowHeadersVisible = false;
-            this.GridConsumo.RowHeadersWidth = 42;
-            this.GridConsumo.RowTemplate.Height = 25;
-            this.GridConsumo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.GridConsumo.Size = new System.Drawing.Size(264, 84);
-            this.GridConsumo.TabIndex = 90;
-            this.GridConsumo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
-            // 
-            // cONSUMOSBindingSource
-            // 
-            this.cONSUMOSBindingSource.DataMember = "CONSUMOS";
-            this.cONSUMOSBindingSource.DataSource = this.dataSet1;
-            // 
-            // cONSUMOSTableAdapter
-            // 
-            this.cONSUMOSTableAdapter.ClearBeforeFill = true;
-            // 
-            // totalFactura
-            // 
-            this.totalFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(191)))), ((int)(((byte)(227)))));
-            this.totalFactura.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
-            this.totalFactura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
-            this.totalFactura.Location = new System.Drawing.Point(223, 453);
-            this.totalFactura.Name = "totalFactura";
-            this.totalFactura.ReadOnly = true;
-            this.totalFactura.Size = new System.Drawing.Size(162, 23);
-            this.totalFactura.TabIndex = 92;
-            this.totalFactura.TextChanged += new System.EventHandler(this.totalFactura_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
-            this.label2.Location = new System.Drawing.Point(158, 456);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 18);
-            this.label2.TabIndex = 91;
-            this.label2.Text = "Total:";
-            // 
-            // labelConsecutivo
-            // 
-            this.labelConsecutivo.AutoSize = true;
-            this.labelConsecutivo.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelConsecutivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.labelConsecutivo.Location = new System.Drawing.Point(443, 41);
-            this.labelConsecutivo.Name = "labelConsecutivo";
-            this.labelConsecutivo.Size = new System.Drawing.Size(23, 16);
-            this.labelConsecutivo.TabIndex = 100;
-            this.labelConsecutivo.Text = "...";
-            this.labelConsecutivo.Visible = false;
-            // 
-            // eSTRATOSTableAdapter
-            // 
-            this.eSTRATOSTableAdapter.ClearBeforeFill = true;
-            // 
-            // bARRIOSTableAdapter
-            // 
-            this.bARRIOSTableAdapter.ClearBeforeFill = true;
             // 
             // idPredioDataGridViewTextBoxColumn
             // 
@@ -403,6 +267,16 @@ namespace AqueaductoApp.CapaVistas
             this.Id_Estrato.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Id_Estrato.ValueMember = "Id_Estrato";
             // 
+            // eSTRATOSBindingSource
+            // 
+            this.eSTRATOSBindingSource.DataMember = "ESTRATOS";
+            this.eSTRATOSBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // Id_Barrio
             // 
             this.Id_Barrio.DataPropertyName = "Id_Barrio";
@@ -416,6 +290,11 @@ namespace AqueaductoApp.CapaVistas
             this.Id_Barrio.ValueMember = "Id_Barrio";
             this.Id_Barrio.Visible = false;
             // 
+            // bARRIOSBindingSource
+            // 
+            this.bARRIOSBindingSource.DataMember = "BARRIOS";
+            this.bARRIOSBindingSource.DataSource = this.dataSet1;
+            // 
             // estadoPredioDataGridViewTextBoxColumn
             // 
             this.estadoPredioDataGridViewTextBoxColumn.DataPropertyName = "Estado_Predio";
@@ -423,6 +302,71 @@ namespace AqueaductoApp.CapaVistas
             this.estadoPredioDataGridViewTextBoxColumn.Name = "estadoPredioDataGridViewTextBoxColumn";
             this.estadoPredioDataGridViewTextBoxColumn.ReadOnly = true;
             this.estadoPredioDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // pREDIOSBindingSource1
+            // 
+            this.pREDIOSBindingSource1.DataMember = "PREDIOS";
+            this.pREDIOSBindingSource1.DataSource = this.dataSet1;
+            // 
+            // pREDIOSBindingSource
+            // 
+            this.pREDIOSBindingSource.DataMember = "PREDIOS";
+            this.pREDIOSBindingSource.DataSource = this.dataSet1;
+            // 
+            // pREDIOSTableAdapter
+            // 
+            this.pREDIOSTableAdapter.ClearBeforeFill = true;
+            // 
+            // GridConsumo
+            // 
+            this.GridConsumo.AllowUserToAddRows = false;
+            this.GridConsumo.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GridConsumo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.GridConsumo.AutoGenerateColumns = false;
+            this.GridConsumo.BackgroundColor = System.Drawing.Color.White;
+            this.GridConsumo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GridConsumo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.GridConsumo.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.GridConsumo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridConsumo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.GridConsumo.ColumnHeadersHeight = 20;
+            this.GridConsumo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.GridConsumo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idConsumoDataGridViewTextBoxColumn,
+            this.numeroCatastroDataGridViewTextBoxColumn1,
+            this.fechaConsumoDataGridViewTextBoxColumn,
+            this.mesConsumoDataGridViewTextBoxColumn,
+            this.metrosCubicosDataGridViewTextBoxColumn});
+            this.GridConsumo.DataSource = this.cONSUMOSBindingSource;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GridConsumo.DefaultCellStyle = dataGridViewCellStyle10;
+            this.GridConsumo.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.GridConsumo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.GridConsumo.Location = new System.Drawing.Point(439, 293);
+            this.GridConsumo.Name = "GridConsumo";
+            this.GridConsumo.ReadOnly = true;
+            this.GridConsumo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.GridConsumo.RowHeadersVisible = false;
+            this.GridConsumo.RowHeadersWidth = 42;
+            this.GridConsumo.RowTemplate.Height = 25;
+            this.GridConsumo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.GridConsumo.Size = new System.Drawing.Size(249, 79);
+            this.GridConsumo.TabIndex = 90;
+            this.GridConsumo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // idConsumoDataGridViewTextBoxColumn
             // 
@@ -478,12 +422,97 @@ namespace AqueaductoApp.CapaVistas
             this.metrosCubicosDataGridViewTextBoxColumn.ReadOnly = true;
             this.metrosCubicosDataGridViewTextBoxColumn.Width = 120;
             // 
+            // cONSUMOSBindingSource
+            // 
+            this.cONSUMOSBindingSource.DataMember = "CONSUMOS";
+            this.cONSUMOSBindingSource.DataSource = this.dataSet1;
+            // 
+            // cONSUMOSTableAdapter
+            // 
+            this.cONSUMOSTableAdapter.ClearBeforeFill = true;
+            // 
+            // totalFactura
+            // 
+            this.totalFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(64)))), ((int)(((byte)(227)))));
+            this.totalFactura.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.totalFactura.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalFactura.ForeColor = System.Drawing.Color.White;
+            this.totalFactura.Location = new System.Drawing.Point(339, 504);
+            this.totalFactura.Name = "totalFactura";
+            this.totalFactura.ReadOnly = true;
+            this.totalFactura.Size = new System.Drawing.Size(192, 20);
+            this.totalFactura.TabIndex = 92;
+            this.totalFactura.TextChanged += new System.EventHandler(this.totalFactura_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(260, 500);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 23);
+            this.label2.TabIndex = 91;
+            this.label2.Text = "Total:";
+            // 
+            // labelConsecutivo
+            // 
+            this.labelConsecutivo.AutoSize = true;
+            this.labelConsecutivo.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelConsecutivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.labelConsecutivo.Location = new System.Drawing.Point(443, 41);
+            this.labelConsecutivo.Name = "labelConsecutivo";
+            this.labelConsecutivo.Size = new System.Drawing.Size(23, 16);
+            this.labelConsecutivo.TabIndex = 100;
+            this.labelConsecutivo.Text = "...";
+            this.labelConsecutivo.Visible = false;
+            // 
+            // eSTRATOSTableAdapter
+            // 
+            this.eSTRATOSTableAdapter.ClearBeforeFill = true;
+            // 
+            // bARRIOSTableAdapter
+            // 
+            this.bARRIOSTableAdapter.ClearBeforeFill = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(5, 5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(785, 50);
+            this.panel1.TabIndex = 102;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
+            this.label1.Location = new System.Drawing.Point(267, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(259, 32);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Agregar Factura";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(89, 189);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(234, 224);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 111;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmAgregarFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(560, 647);
+            this.ClientSize = new System.Drawing.Size(795, 745);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelConsecutivo);
             this.Controls.Add(this.totalFactura);
             this.Controls.Add(this.label2);
@@ -495,13 +524,12 @@ namespace AqueaductoApp.CapaVistas
             this.Controls.Add(this.btnAgregarFact);
             this.Controls.Add(this.txtCatastro);
             this.Controls.Add(this.labelIdCatratral);
-            this.Controls.Add(this.labelFactura);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAgregarFactura";
             this.Padding = new System.Windows.Forms.Padding(5);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Agregar Factura";
+            this.Text = "9";
             this.Load += new System.EventHandler(this.FrmAgregarFactura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GridPredio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eSTRATOSBindingSource)).EndInit();
@@ -511,14 +539,15 @@ namespace AqueaductoApp.CapaVistas
             ((System.ComponentModel.ISupportInitialize)(this.pREDIOSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridConsumo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cONSUMOSBindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label labelFactura;
         private System.Windows.Forms.TextBox txtCatastro;
         private System.Windows.Forms.Label labelIdCatratral;
         private FontAwesome.Sharp.IconButton btnAgregarFact;
@@ -553,5 +582,8 @@ namespace AqueaductoApp.CapaVistas
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaConsumoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mesConsumoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn metrosCubicosDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
