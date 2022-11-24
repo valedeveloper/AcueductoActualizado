@@ -47,8 +47,8 @@ namespace AqueaductoApp.CapaVistas
             this.labelID = new System.Windows.Forms.Label();
             this.uSUARIOSTableAdapter = new AqueaductoApp.CapaDatos.DataSet1TableAdapters.USUARIOSTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -80,9 +80,9 @@ namespace AqueaductoApp.CapaVistas
             this.idRolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direcciónImagenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uSUARIOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.uSUARIOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -134,20 +134,10 @@ namespace AqueaductoApp.CapaVistas
             this.panel1.Size = new System.Drawing.Size(789, 50);
             this.panel1.TabIndex = 68;
             // 
-            // txtTelefono
-            // 
-            this.txtTelefono.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTelefono.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txtTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
-            this.txtTelefono.Location = new System.Drawing.Point(456, 385);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(192, 16);
-            this.txtTelefono.TabIndex = 75;
-            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.txtTelefono);
             this.panel2.Controls.Add(this.txtCedula);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label12);
@@ -174,6 +164,17 @@ namespace AqueaductoApp.CapaVistas
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(789, 689);
             this.panel2.TabIndex = 76;
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTelefono.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
+            this.txtTelefono.Location = new System.Drawing.Point(456, 351);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(192, 16);
+            this.txtTelefono.TabIndex = 109;
             // 
             // txtCedula
             // 
@@ -450,7 +451,7 @@ namespace AqueaductoApp.CapaVistas
             this.GridUser.DefaultCellStyle = dataGridViewCellStyle10;
             this.GridUser.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.GridUser.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.GridUser.Location = new System.Drawing.Point(242, 28);
+            this.GridUser.Location = new System.Drawing.Point(252, 29);
             this.GridUser.MultiSelect = false;
             this.GridUser.Name = "GridUser";
             this.GridUser.ReadOnly = true;
@@ -463,7 +464,6 @@ namespace AqueaductoApp.CapaVistas
             dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.GridUser.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.GridUser.RowHeadersVisible = false;
-            this.GridUser.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.GridUser.RowTemplate.Height = 25;
             this.GridUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.GridUser.Size = new System.Drawing.Size(332, 112);
@@ -593,6 +593,11 @@ namespace AqueaductoApp.CapaVistas
             this.direcciónImagenDataGridViewTextBoxColumn.ReadOnly = true;
             this.direcciónImagenDataGridViewTextBoxColumn.Visible = false;
             // 
+            // uSUARIOSBindingSource1
+            // 
+            this.uSUARIOSBindingSource1.DataMember = "USUARIOS";
+            this.uSUARIOSBindingSource1.DataSource = this.dataSet1;
+            // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Gray;
@@ -623,11 +628,6 @@ namespace AqueaductoApp.CapaVistas
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // uSUARIOSBindingSource1
-            // 
-            this.uSUARIOSBindingSource1.DataMember = "USUARIOS";
-            this.uSUARIOSBindingSource1.DataSource = this.dataSet1;
-            // 
             // FrmModificarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -635,7 +635,6 @@ namespace AqueaductoApp.CapaVistas
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(795, 745);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelID);
             this.ForeColor = System.Drawing.SystemColors.Window;
@@ -665,7 +664,6 @@ namespace AqueaductoApp.CapaVistas
         private System.Windows.Forms.BindingSource uSUARIOSBindingSource;
         private CapaDatos.DataSet1TableAdapters.USUARIOSTableAdapter uSUARIOSTableAdapter;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.Label label2;
@@ -701,5 +699,6 @@ namespace AqueaductoApp.CapaVistas
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoUsuarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn direcciónImagenDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource uSUARIOSBindingSource1;
+        private System.Windows.Forms.TextBox txtTelefono;
     }
 }

@@ -59,6 +59,11 @@ namespace AqueaductoApp
             {
                 panelsubMenuReportes.Visible = false;
             }
+            if (panelSubBarrio.Visible == true)
+            {
+                panelSubBarrio.Visible = false;
+            }
+
         }
         private void showSubMenu(Panel subMenu)
         {
@@ -276,7 +281,7 @@ namespace AqueaductoApp
         private void btnBarrio_Click(object sender, EventArgs e)
         {
 
-            mostrarPanel(new FrmCrudBarrio());
+            showSubMenu(panelSubBarrio);
 
            
         }
@@ -419,6 +424,18 @@ namespace AqueaductoApp
            reportePredio.ShowDialog();
            reportePredio.Close();
            hideSubmenu();
+        }
+
+        private void btnCrearBarrio_Click(object sender, EventArgs e)
+        {
+            mostrarPanel(new FrmAgregarBarrio());
+            hideSubmenu();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            mostrarPanel(new FrmModificarBarrio());
+            hideSubmenu();
         }
     }
 }

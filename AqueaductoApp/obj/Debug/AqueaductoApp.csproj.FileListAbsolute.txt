@@ -469,3 +469,5 @@ C:\Users\PC01AQ\Desktop\AcueductoActualizado\AqueaductoApp\bin\Debug\stdole.dll
 C:\Users\PC01AQ\Desktop\AcueductoActualizado\AqueaductoApp\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\PC01AQ\Desktop\AcueductoActualizado\AqueaductoApp\bin\Debug\Aspose.BarCode.xml
 C:\Users\PC01AQ\Desktop\AcueductoActualizado\AqueaductoApp\obj\Debug\AqueaductoApp.csproj.CopyComplete
+C:\Users\PC01AQ\Desktop\AcueductoActualizado\AqueaductoApp\obj\Debug\AqueaductoApp.CapaVistas.FrmAgregarBarrio.resources
+C:\Users\PC01AQ\Desktop\AcueductoActualizado\AqueaductoApp\obj\Debug\AqueaductoApp.CapaVistas.FrmModificarBarrio.resources

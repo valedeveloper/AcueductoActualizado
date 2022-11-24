@@ -108,6 +108,12 @@
     <Compile Include="CapaModelos\PictureRound.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CapaVistas\FrmAgregarBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaVistas\FrmAgregarBarrio.Designer.cs">
+      <DependentUpon>FrmAgregarBarrio.cs</DependentUpon>
+    </Compile>
     <Compile Include="CapaVistas\FrmAgregarEstrato.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +155,12 @@
     </Compile>
     <Compile Include="CapaVistas\FrmCrudEstrato.Designer.cs">
       <DependentUpon>FrmCrudEstrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaVistas\FrmModificarBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaVistas\FrmModificarBarrio.Designer.cs">
+      <DependentUpon>FrmModificarBarrio.cs</DependentUpon>
     </Compile>
     <Compile Include="CapaVistas\FrmModificarConsumo.cs">
       <SubType>Form</SubType>
@@ -302,6 +314,9 @@
     <Compile Include="Reportes\FrmReportPredio.Designer.cs">
       <DependentUpon>FrmReportPredio.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CapaVistas\FrmAgregarBarrio.resx">
+      <DependentUpon>FrmAgregarBarrio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CapaVistas\FrmAgregarConsumo.resx">
       <DependentUpon>FrmAgregarConsumo.cs</DependentUpon>
     </EmbeddedResource>
@@ -322,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapaVistas\FrmImprimirFactura.resx">
       <DependentUpon>FrmImprimirFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaVistas\FrmModificarBarrio.resx">
+      <DependentUpon>FrmModificarBarrio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapaVistas\FrmModificarConsumo.resx">
       <DependentUpon>FrmModificarConsumo.cs</DependentUpon>

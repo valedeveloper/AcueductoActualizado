@@ -32,7 +32,36 @@ namespace AqueaductoApp.CapaVistas
 
         private void GridPropietario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            posicion = GridPropietario.CurrentRow.Index;
+
+            id = int.Parse(GridPropietario.CurrentRow.Cells[0].Value.ToString());
+            cedula = GridPropietario.CurrentRow.Cells[1].Value.ToString();
+            this.txtCedula.Text = cedula;
+            string nombre = GridPropietario.CurrentRow.Cells[2].Value.ToString();
+            this.txtName.Text = nombre;
+            string apellido = GridPropietario.CurrentRow.Cells[3].Value.ToString();
+            this.txtLastName.Text = apellido;
+            string telefono = GridPropietario.CurrentRow.Cells[4].Value.ToString();
+            this.txtTelefono.Text = telefono;
+            string correo = GridPropietario.CurrentRow.Cells[5].Value.ToString();
+            this.txtCorreo.Text = correo;
+            estadoPropi = GridPropietario.CurrentRow.Cells[6].Value.ToString();
+
+
+            //Poner el estado en el comboBox
+            if (estadoPropi == "1")
+            {
+                estadoStri = "Activo";
+                int index = comboEstado.FindString(estadoStri);
+                comboEstado.SelectedIndex = index;
+            }
+            else
+            {
+                estadoStri = "Inactivo";
+                int index = comboEstado.FindString(estadoStri);
+                comboEstado.SelectedIndex = index;
+            }
+
 
         }
 
@@ -233,39 +262,7 @@ namespace AqueaductoApp.CapaVistas
             }
         }
 
-        private void GridUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            posicion = GridPropietario.CurrentRow.Index;
-
-            id = int.Parse(GridPropietario.CurrentRow.Cells[0].Value.ToString());
-            cedula = GridPropietario.CurrentRow.Cells[1].Value.ToString();
-            this.txtCedula.Text = cedula;
-            string nombre = GridPropietario.CurrentRow.Cells[2].Value.ToString();
-            this.txtName.Text = nombre;
-            string apellido = GridPropietario.CurrentRow.Cells[3].Value.ToString();
-            this.txtLastName.Text = apellido;
-            string telefono = GridPropietario.CurrentRow.Cells[4].Value.ToString();
-            this.txtTelefono.Text = telefono;
-            string correo = GridPropietario.CurrentRow.Cells[5].Value.ToString();
-            this.txtCorreo.Text = correo;
-            estadoPropi = GridPropietario.CurrentRow.Cells[6].Value.ToString();
-
-
-            //Poner el estado en el comboBox
-            if (estadoPropi == "1")
-            {
-                estadoStri = "Activo";
-                int index = comboEstado.FindString(estadoStri);
-                comboEstado.SelectedIndex = index;
-            }
-            else
-            {
-                estadoStri = "Inactivo";
-                int index = comboEstado.FindString(estadoStri);
-                comboEstado.SelectedIndex = index;
-            }
-
-        }
+       
 
         private void FrmModificarPropietario_Load(object sender, EventArgs e)
         {

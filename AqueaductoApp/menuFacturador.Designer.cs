@@ -98,7 +98,7 @@ namespace AqueaductoApp
             this.btnImpresas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImpresas.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImpresas.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnImpresas.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.btnImpresas.IconChar = FontAwesome.Sharp.IconChar.CalendarCheck;
             this.btnImpresas.IconColor = System.Drawing.SystemColors.Window;
             this.btnImpresas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnImpresas.IconSize = 30;
@@ -122,7 +122,7 @@ namespace AqueaductoApp
             this.btnReportePendi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportePendi.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportePendi.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnReportePendi.IconChar = FontAwesome.Sharp.IconChar.CalendarTimes;
+            this.btnReportePendi.IconChar = FontAwesome.Sharp.IconChar.CalendarWeek;
             this.btnReportePendi.IconColor = System.Drawing.SystemColors.Window;
             this.btnReportePendi.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnReportePendi.IconSize = 30;

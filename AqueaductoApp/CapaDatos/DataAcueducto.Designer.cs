@@ -7681,9 +7681,10 @@ SELECT Id_Barrio, Nombre_Barrio, Codigo_Postal FROM BARRIOS WHERE (Id_Barrio = @
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Barrio", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Barrio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[5].Connection = this.Connection;
-            this._commandCollection[5].CommandText = "SELECT Id_Barrio FROM BARRIOS WHERE Nombre_Barrio=@Nombre_Barrio";
-            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre_Barrio", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre_Barrio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].CommandText = "dbo.validarBarrio";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre_Barrio", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7961,13 +7962,13 @@ SELECT Id_Barrio, Nombre_Barrio, Codigo_Postal FROM BARRIOS WHERE (Id_Barrio = @
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual global::System.Nullable<int> validarBarrio(string Nombre_Barrio) {
+        public virtual object validarBarrio(string Nombre_Barrio) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[5];
             if ((Nombre_Barrio == null)) {
-                throw new global::System.ArgumentNullException("Nombre_Barrio");
+                command.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[0].Value = ((string)(Nombre_Barrio));
+                command.Parameters[1].Value = ((string)(Nombre_Barrio));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7985,10 +7986,10 @@ SELECT Id_Barrio, Nombre_Barrio, Codigo_Postal FROM BARRIOS WHERE (Id_Barrio = @
             }
             if (((returnValue == null) 
                         || (returnValue.GetType() == typeof(global::System.DBNull)))) {
-                return new global::System.Nullable<int>();
+                return null;
             }
             else {
-                return new global::System.Nullable<int>(((int)(returnValue)));
+                return ((object)(returnValue));
             }
         }
     }

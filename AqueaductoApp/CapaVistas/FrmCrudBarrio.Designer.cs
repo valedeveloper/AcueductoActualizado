@@ -30,12 +30,12 @@ namespace AqueaductoApp.CapaVistas
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label label3;
+            System.Windows.Forms.Label label4;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.Label label3;
-            System.Windows.Forms.Label label4;
             this.dataSet1 = new AqueaductoApp.CapaDatos.DataSet1();
             this.cONSUMOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cONSUMOSTableAdapter = new AqueaductoApp.CapaDatos.DataSet1TableAdapters.CONSUMOSTableAdapter();
@@ -61,6 +61,28 @@ namespace AqueaductoApp.CapaVistas
             ((System.ComponentModel.ISupportInitialize)(this.bARRIOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridBarrio)).BeginInit();
             this.SuspendLayout();
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
+            label3.Location = new System.Drawing.Point(109, 371);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(133, 18);
+            label3.TabIndex = 5;
+            label3.Text = "Codigo Postal:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
+            label4.Location = new System.Drawing.Point(99, 315);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(143, 18);
+            label4.TabIndex = 3;
+            label4.Text = "Nombre Barrio:";
             // 
             // dataSet1
             // 
@@ -121,7 +143,7 @@ namespace AqueaductoApp.CapaVistas
             this.txtPostal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(191)))), ((int)(((byte)(227)))));
             this.txtPostal.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bARRIOSBindingSource, "Codigo_Postal", true));
             this.txtPostal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPostal.Location = new System.Drawing.Point(251, 362);
+            this.txtPostal.Location = new System.Drawing.Point(251, 371);
             this.txtPostal.Name = "txtPostal";
             this.txtPostal.Size = new System.Drawing.Size(155, 27);
             this.txtPostal.TabIndex = 6;
@@ -262,28 +284,6 @@ namespace AqueaductoApp.CapaVistas
             this.label2.Size = new System.Drawing.Size(109, 29);
             this.label2.TabIndex = 86;
             this.label2.Text = "Barrios";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
-            label3.Location = new System.Drawing.Point(109, 371);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(133, 18);
-            label3.TabIndex = 5;
-            label3.Text = "Codigo Postal:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(58)))), ((int)(((byte)(164)))));
-            label4.Location = new System.Drawing.Point(99, 315);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(143, 18);
-            label4.TabIndex = 3;
-            label4.Text = "Nombre Barrio:";
             // 
             // FrmCrudBarrio
             // 

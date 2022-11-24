@@ -310,6 +310,9 @@ namespace AqueaductoApp.CapaVistas
 
         }
 
-       
+        private void txtCorreo_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -39,6 +39,7 @@ namespace AqueaductoApp.CapaVistas
             this.label3 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.comboEstado = new System.Windows.Forms.ComboBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@ namespace AqueaductoApp.CapaVistas
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
@@ -119,7 +119,7 @@ namespace AqueaductoApp.CapaVistas
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(170, 348);
+            this.button2.Location = new System.Drawing.Point(158, 346);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(64, 23);
             this.button2.TabIndex = 95;
@@ -202,6 +202,23 @@ namespace AqueaductoApp.CapaVistas
             this.comboEstado.Name = "comboEstado";
             this.comboEstado.Size = new System.Drawing.Size(114, 24);
             this.comboEstado.TabIndex = 82;
+            this.comboEstado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboEstado_KeyPress);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Gray;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(382, 505);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(139, 33);
+            this.btnCancelar.TabIndex = 85;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // btnAgregar
             // 
@@ -308,6 +325,7 @@ namespace AqueaductoApp.CapaVistas
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(187, 16);
             this.txtCorreo.TabIndex = 79;
+            this.txtCorreo.TextChanged += new System.EventHandler(this.txtCorreo_TextChanged_1);
             // 
             // label2
             // 
@@ -335,6 +353,7 @@ namespace AqueaductoApp.CapaVistas
             this.combotxtRol.Name = "combotxtRol";
             this.combotxtRol.Size = new System.Drawing.Size(114, 24);
             this.combotxtRol.TabIndex = 81;
+            this.combotxtRol.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combotxtRol_KeyPress);
             // 
             // txtTelefono
             // 
@@ -346,6 +365,7 @@ namespace AqueaductoApp.CapaVistas
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(188, 16);
             this.txtTelefono.TabIndex = 77;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtLastName
             // 
@@ -357,6 +377,7 @@ namespace AqueaductoApp.CapaVistas
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(191, 16);
             this.txtLastName.TabIndex = 76;
+            this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // txtName
             // 
@@ -368,22 +389,7 @@ namespace AqueaductoApp.CapaVistas
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(192, 16);
             this.txtName.TabIndex = 75;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Gray;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(382, 505);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(5);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(139, 33);
-            this.btnCancelar.TabIndex = 85;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.button2_Click_1);
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // FrmAgregarUsuario
             // 

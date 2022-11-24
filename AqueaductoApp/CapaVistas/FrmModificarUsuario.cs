@@ -107,7 +107,6 @@ namespace AqueaductoApp.CapaVistas
                 this.txtName.Text = "";
                 this.txtLastName.Text = "";
                 this.txtCorreo.Text = "";
-                this.txtTelefono.Text = "";
                 this.txtPassword.Text = "";
                 this.txtFile.Text = "";
                 this.pictureUser.Image = null;
@@ -145,7 +144,7 @@ namespace AqueaductoApp.CapaVistas
                         if (string.IsNullOrEmpty(this.txtTelefono.Text))
                         {
                             MessageBox.Show("Digite su Teléfono", "Notificación");
-                            txtTelefono.Focus();
+                            //txtTelefono.Focus();
                         }
                         else
                         {
@@ -184,7 +183,7 @@ namespace AqueaductoApp.CapaVistas
                                         this.txtName.Text = "";
                                         this.txtLastName.Text = "";
                                         this.txtCorreo.Text = "";
-                                        this.txtTelefono.Text = "";
+                                       this.txtTelefono.Text = "";
                                         this.txtPassword.Text = "";
                                         this.txtFile.Text = "";
                                         this.pictureUser.Image = null;
@@ -304,10 +303,10 @@ namespace AqueaductoApp.CapaVistas
                 }
                 else
                 {
-                    if (comboRol.Text == "Facturador")
-                    {
+               
+                    
                         rol = 3;
-                    }
+                   
 
                 }
             }
@@ -385,7 +384,7 @@ namespace AqueaductoApp.CapaVistas
             string correo = GridUser.CurrentRow.Cells[4].Value.ToString();
             this.txtCorreo.Text = correo;
             string telefono = GridUser.CurrentRow.Cells[5].Value.ToString();
-            this.txtTelefono.Text = telefono;
+          this.txtTelefono.Text = telefono;
 
             pass = GridUser.CurrentRow.Cells[6].Value.ToString();
 

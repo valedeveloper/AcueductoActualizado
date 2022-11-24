@@ -162,8 +162,8 @@ namespace AqueaductoApp.CapaVistas
             //Mensaje de Cancelado
             if (MessageBox.Show("¿Desea cancelar el proceso?", "Notificación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                CapaDatos.DataSet1TableAdapters.PREDIOSTableAdapter prediosExist = new CapaDatos.DataSet1TableAdapters.PREDIOSTableAdapter();
-                int predioExistencia = (int)prediosExist.validarPredio(this.txtCatastro.Text);
+                //CapaDatos.DataSet1TableAdapters.PREDIOSTableAdapter prediosExist = new CapaDatos.DataSet1TableAdapters.PREDIOSTableAdapter();
+                //int predioExistencia = (int)prediosExist.validarPredio(this.txtCatastro.Text);
 
                 this.txtCedula.Text = "";
                 this.txtCatastro.Text = "";
