@@ -85,7 +85,7 @@ namespace AqueaductoApp.CapaVistas
             // 
             // iconButton1
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.DeepPink;
+            this.iconButton1.BackColor = System.Drawing.Color.RoyalBlue;
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
